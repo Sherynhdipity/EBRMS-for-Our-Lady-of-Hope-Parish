@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D70167B6-A4E2-47D8-962C-8444822DFCC6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EBRMS</RootNamespace>
+    <AssemblyName>EBRMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShapes">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.Deprecated">
+      <HintPath>..\..\..\Downloads\BunifuCrackV5-main\BunifuCrackV5-main\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBConnection.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Priest\Update User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Priest\Update User.Designer.cs">
+      <DependentUpon>Update User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Priest\PriestMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Priest\PriestMainform.Designer.cs">
+      <DependentUpon>PriestMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Priest\Add User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Priest\Add User.Designer.cs">
+      <DependentUpon>Add User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Priest\UserManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Priest\UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Secretary\Secretary Reports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Secretary\Secretary Reports.Designer.cs">
+      <DependentUpon>Secretary Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\Records.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Secretary\Records.Designer.cs">
+      <DependentUpon>Records.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\BookingManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Secretary\BookingManagement.Designer.cs">
+      <DependentUpon>BookingManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Secretary\SecretaryMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Secretary\SecretaryMainform.Designer.cs">
+      <DependentUpon>SecretaryMainform.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Treasurer\Collections.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Treasurer\Collections.Designer.cs">
+      <DependentUpon>Collections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Treasurer\TreasurerMainform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Treasurer\TreasurerMainform.Designer.cs">
+      <DependentUpon>TreasurerMainform.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Priest\Update User.resx">
+      <DependentUpon>Update User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Priest\Add User.resx">
+      <DependentUpon>Add User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Priest\PriestMainform.resx">
+      <DependentUpon>PriestMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Priest\UserManagement.resx">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Secretary\Secretary Reports.resx">
+      <DependentUpon>Secretary Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\Records.resx">
+      <DependentUpon>Records.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\BookingManagement.resx">
+      <DependentUpon>BookingManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Secretary\SecretaryMainform.resx">
+      <DependentUpon>SecretaryMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Treasurer\Collections.resx">
+      <DependentUpon>Collections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Treasurer\TreasurerMainform.resx">
+      <DependentUpon>TreasurerMainform.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\352091_search_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\211652_close_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\received_632071118312447.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\e17b07ddedc0cf14c89e0702946475c5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\R.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
