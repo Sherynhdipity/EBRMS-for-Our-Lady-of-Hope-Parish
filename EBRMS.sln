@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EBRMS", "EBRMS\EBRMS.csproj", "{D70167B6-A4E2-47D8-962C-8444822DFCC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D70167B6-A4E2-47D8-962C-8444822DFCC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D70167B6-A4E2-47D8-962C-8444822DFCC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D70167B6-A4E2-47D8-962C-8444822DFCC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D70167B6-A4E2-47D8-962C-8444822DFCC6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29F30774-1BBE-4368-BCBF-617D0782F8CC}
+	EndGlobalSection
+EndGlobal
