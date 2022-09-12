@@ -17,15 +17,15 @@ namespace EBRMS.Treasurer
             InitializeComponent();
         }
 
-        private static ucRecords records;
+        private static ucCollections collections;
 
-        public static ucRecords recordsInstance
+        public static ucCollections collectionsInstance
         {
             get
             {
-                if (records == null)
-                    records = new ucRecords();
-                return records;
+                if (collections == null)
+                    collections = new ucCollections();
+                return collections;
             }
 
         }
