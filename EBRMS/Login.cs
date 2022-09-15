@@ -16,9 +16,9 @@ using EBRMS.Treasurer;
 
 namespace EBRMS
 {
-    public partial class Login : Form
+    public partial class frmLogin : Form
     {
-        public Login()
+        public frmLogin()
         {
             InitializeComponent();
         }

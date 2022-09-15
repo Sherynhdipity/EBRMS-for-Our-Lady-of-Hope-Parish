@@ -293,5 +293,8 @@
   <ItemGroup>
     <None Include="Resources\coin-collecting.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_ebrms.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

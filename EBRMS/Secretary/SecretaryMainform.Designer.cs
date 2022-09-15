@@ -168,6 +168,7 @@ namespace EBRMS.Secretary
             this.pbLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogout.TabIndex = 11;
             this.pbLogout.TabStop = false;
+            this.pbLogout.Click += new System.EventHandler(this.pbLogout_Click);
             // 
             // btnSearchRecords
             // 

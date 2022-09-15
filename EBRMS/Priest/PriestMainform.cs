@@ -35,8 +35,23 @@ namespace EBRMS.Priest
 
         private void frmMainPriest_Load(object sender, EventArgs e)
         {
-            lblUserName.Text = Login.GetUserName.ToString();
-            lblUserRole.Text = Login.GetUserRole.ToString();
+            lblUserName.Text = frmLogin.GetUserName.ToString();
+            lblUserRole.Text = frmLogin.GetUserRole.ToString();
+        }
+
+        private void pbLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Do you want to Logout?", "Log-out", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                frmLogin login = new frmLogin();
+                this.Hide();
+                login.Show();
+
+                frmAddUser addUser = new frmAddUser();
+                frmUpdateUser updateUser = new frmUpdateUser();
+
+            }
         }
     }
 }

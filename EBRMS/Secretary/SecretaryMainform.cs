@@ -45,5 +45,17 @@ namespace EBRMS.Secretary
                 ucRecords.recordsInstance.BringToFront();
             }
         }
+
+        private void pbLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Do you want to Logout?", "Log-out", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                frmLogin login = new frmLogin();
+                this.Hide();
+                login.Show();
+
+            }
+        }
     }
 }

@@ -30,8 +30,8 @@ namespace EBRMS.Priest
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainPriest));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pbLogout = new System.Windows.Forms.PictureBox();
             this.btnSchedules = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -60,7 +60,7 @@ namespace EBRMS.Priest
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(-5, -15);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(416, 1010);
             this.panel1.TabIndex = 0;
@@ -69,12 +69,13 @@ namespace EBRMS.Priest
             // 
             this.pbLogout.Image = global::EBRMS.Properties.Resources.e17b07ddedc0cf14c89e0702946475c5;
             this.pbLogout.Location = new System.Drawing.Point(21, 934);
-            this.pbLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pbLogout.Margin = new System.Windows.Forms.Padding(4);
             this.pbLogout.Name = "pbLogout";
             this.pbLogout.Size = new System.Drawing.Size(53, 50);
             this.pbLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogout.TabIndex = 11;
             this.pbLogout.TabStop = false;
+            this.pbLogout.Click += new System.EventHandler(this.pbLogout_Click);
             // 
             // btnSchedules
             // 
@@ -95,11 +96,11 @@ namespace EBRMS.Priest
             this.btnSchedules.ColorContrastOnClick = 45;
             this.btnSchedules.ColorContrastOnHover = 45;
             this.btnSchedules.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnSchedules.CustomizableEdges = borderEdges1;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btnSchedules.CustomizableEdges = borderEdges3;
             this.btnSchedules.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnSchedules.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSchedules.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -124,7 +125,7 @@ namespace EBRMS.Priest
             this.btnSchedules.IdleIconRightImage = null;
             this.btnSchedules.IndicateFocus = false;
             this.btnSchedules.Location = new System.Drawing.Point(63, 708);
-            this.btnSchedules.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSchedules.Margin = new System.Windows.Forms.Padding(4);
             this.btnSchedules.Name = "btnSchedules";
             this.btnSchedules.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSchedules.OnDisabledState.BorderRadius = 20;
@@ -185,11 +186,11 @@ namespace EBRMS.Priest
             this.btnUsers.ColorContrastOnClick = 45;
             this.btnUsers.ColorContrastOnHover = 45;
             this.btnUsers.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.btnUsers.CustomizableEdges = borderEdges2;
+            borderEdges4.BottomLeft = true;
+            borderEdges4.BottomRight = true;
+            borderEdges4.TopLeft = true;
+            borderEdges4.TopRight = true;
+            this.btnUsers.CustomizableEdges = borderEdges4;
             this.btnUsers.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnUsers.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnUsers.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -214,7 +215,7 @@ namespace EBRMS.Priest
             this.btnUsers.IdleIconRightImage = null;
             this.btnUsers.IndicateFocus = false;
             this.btnUsers.Location = new System.Drawing.Point(63, 597);
-            this.btnUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUsers.Margin = new System.Windows.Forms.Padding(4);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnUsers.OnDisabledState.BorderRadius = 20;
@@ -265,7 +266,7 @@ namespace EBRMS.Priest
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Impact", 18F);
             this.bunifuLabel2.Location = new System.Drawing.Point(129, 448);
-            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.bunifuLabel2.Size = new System.Drawing.Size(153, 74);
@@ -278,7 +279,7 @@ namespace EBRMS.Priest
             // 
             this.pictureBox2.Image = global::EBRMS.Properties.Resources.received_632071118312447;
             this.pictureBox2.Location = new System.Drawing.Point(21, 129);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(373, 289);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -294,7 +295,7 @@ namespace EBRMS.Priest
             this.lblUserName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserName.ForeColor = System.Drawing.Color.White;
             this.lblUserName.Location = new System.Drawing.Point(1468, 38);
-            this.lblUserName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblUserName.Margin = new System.Windows.Forms.Padding(4);
             this.lblUserName.Name = "lblUserName";
             this.lblUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblUserName.Size = new System.Drawing.Size(79, 21);
@@ -310,7 +311,7 @@ namespace EBRMS.Priest
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.lblUserName);
             this.panel2.Location = new System.Drawing.Point(-1, -11);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1715, 98);
             this.panel2.TabIndex = 13;
@@ -324,7 +325,7 @@ namespace EBRMS.Priest
             this.lblUserRole.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUserRole.ForeColor = System.Drawing.Color.White;
             this.lblUserRole.Location = new System.Drawing.Point(1475, 59);
-            this.lblUserRole.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lblUserRole.Margin = new System.Windows.Forms.Padding(4);
             this.lblUserRole.Name = "lblUserRole";
             this.lblUserRole.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblUserRole.Size = new System.Drawing.Size(66, 21);
@@ -337,7 +338,7 @@ namespace EBRMS.Priest
             // 
             this.pictureBox3.Image = global::EBRMS.Properties.Resources.R;
             this.pictureBox3.Location = new System.Drawing.Point(1617, 32);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(52, 48);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -348,7 +349,7 @@ namespace EBRMS.Priest
             // 
             this.panelModule.BackColor = System.Drawing.SystemColors.Control;
             this.panelModule.Location = new System.Drawing.Point(408, 81);
-            this.panelModule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelModule.Margin = new System.Windows.Forms.Padding(4);
             this.panelModule.Name = "panelModule";
             this.panelModule.Size = new System.Drawing.Size(1301, 900);
             this.panelModule.TabIndex = 14;
@@ -362,10 +363,10 @@ namespace EBRMS.Priest
             this.Controls.Add(this.panelModule);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMainPriest";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PriestMainform";
+            this.Text = "Priest Mainform";
             this.Load += new System.EventHandler(this.frmMainPriest_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
