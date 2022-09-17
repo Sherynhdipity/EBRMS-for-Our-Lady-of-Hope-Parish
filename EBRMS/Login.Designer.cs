@@ -31,24 +31,24 @@ namespace EBRMS
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties11 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties12 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtUsername = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.btnLogin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
-            this.bunifuLabel3 = new Bunifu.UI.WinForms.BunifuLabel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -58,23 +58,6 @@ namespace EBRMS
             // 
             this.bunifuElipse1.ElipseRadius = 50;
             this.bunifuElipse1.TargetControl = this;
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel1.Location = new System.Drawing.Point(471, 156);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(64, 32);
-            this.bunifuLabel1.TabIndex = 3;
-            this.bunifuLabel1.Text = "Login";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // txtUsername
             // 
@@ -110,26 +93,26 @@ namespace EBRMS
             this.txtUsername.Modified = false;
             this.txtUsername.Multiline = false;
             this.txtUsername.Name = "txtUsername";
-            stateProperties25.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties25.FillColor = System.Drawing.Color.Empty;
-            stateProperties25.ForeColor = System.Drawing.Color.Empty;
-            stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtUsername.OnActiveState = stateProperties25;
-            stateProperties26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties26.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties26.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtUsername.OnDisabledState = stateProperties26;
-            stateProperties27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties27.FillColor = System.Drawing.Color.Empty;
-            stateProperties27.ForeColor = System.Drawing.Color.Empty;
-            stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtUsername.OnHoverState = stateProperties27;
-            stateProperties28.BorderColor = System.Drawing.Color.Silver;
-            stateProperties28.FillColor = System.Drawing.Color.White;
-            stateProperties28.ForeColor = System.Drawing.Color.Empty;
-            stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtUsername.OnIdleState = stateProperties28;
+            stateProperties9.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties9.FillColor = System.Drawing.Color.Empty;
+            stateProperties9.ForeColor = System.Drawing.Color.Empty;
+            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtUsername.OnActiveState = stateProperties9;
+            stateProperties10.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties10.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtUsername.OnDisabledState = stateProperties10;
+            stateProperties11.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties11.FillColor = System.Drawing.Color.Empty;
+            stateProperties11.ForeColor = System.Drawing.Color.Empty;
+            stateProperties11.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtUsername.OnHoverState = stateProperties11;
+            stateProperties12.BorderColor = System.Drawing.Color.Silver;
+            stateProperties12.FillColor = System.Drawing.Color.White;
+            stateProperties12.ForeColor = System.Drawing.Color.Empty;
+            stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtUsername.OnIdleState = stateProperties12;
             this.txtUsername.Padding = new System.Windows.Forms.Padding(4);
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -185,26 +168,26 @@ namespace EBRMS
             this.txtPassword.Modified = false;
             this.txtPassword.Multiline = false;
             this.txtPassword.Name = "txtPassword";
-            stateProperties29.BorderColor = System.Drawing.Color.DodgerBlue;
-            stateProperties29.FillColor = System.Drawing.Color.Empty;
-            stateProperties29.ForeColor = System.Drawing.Color.Empty;
-            stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtPassword.OnActiveState = stateProperties29;
-            stateProperties30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties30.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtPassword.OnDisabledState = stateProperties30;
-            stateProperties31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties31.FillColor = System.Drawing.Color.Empty;
-            stateProperties31.ForeColor = System.Drawing.Color.Empty;
-            stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtPassword.OnHoverState = stateProperties31;
-            stateProperties32.BorderColor = System.Drawing.Color.Silver;
-            stateProperties32.FillColor = System.Drawing.Color.White;
-            stateProperties32.ForeColor = System.Drawing.Color.Empty;
-            stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtPassword.OnIdleState = stateProperties32;
+            stateProperties13.BorderColor = System.Drawing.Color.DodgerBlue;
+            stateProperties13.FillColor = System.Drawing.Color.Empty;
+            stateProperties13.ForeColor = System.Drawing.Color.Empty;
+            stateProperties13.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtPassword.OnActiveState = stateProperties13;
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties14.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtPassword.OnDisabledState = stateProperties14;
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            stateProperties15.FillColor = System.Drawing.Color.Empty;
+            stateProperties15.ForeColor = System.Drawing.Color.Empty;
+            stateProperties15.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtPassword.OnHoverState = stateProperties15;
+            stateProperties16.BorderColor = System.Drawing.Color.Silver;
+            stateProperties16.FillColor = System.Drawing.Color.White;
+            stateProperties16.ForeColor = System.Drawing.Color.Empty;
+            stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtPassword.OnIdleState = stateProperties16;
             this.txtPassword.Padding = new System.Windows.Forms.Padding(4);
             this.txtPassword.PasswordChar = '●';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
@@ -257,11 +240,11 @@ namespace EBRMS
             this.btnLogin.ColorContrastOnClick = 45;
             this.btnLogin.ColorContrastOnHover = 45;
             this.btnLogin.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btnLogin.CustomizableEdges = borderEdges4;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnLogin.CustomizableEdges = borderEdges2;
             this.btnLogin.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnLogin.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnLogin.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -335,7 +318,7 @@ namespace EBRMS
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.BorderRadius = 1;
-            this.bunifuGradientPanel1.Controls.Add(this.bunifuLabel3);
+            this.bunifuGradientPanel1.Controls.Add(this.label2);
             this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.DodgerBlue;
@@ -348,23 +331,6 @@ namespace EBRMS
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(425, 580);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
-            // bunifuLabel3
-            // 
-            this.bunifuLabel3.AllowParentOverrides = false;
-            this.bunifuLabel3.AutoEllipsis = false;
-            this.bunifuLabel3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuLabel3.Location = new System.Drawing.Point(118, 349);
-            this.bunifuLabel3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuLabel3.Name = "bunifuLabel3";
-            this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel3.Size = new System.Drawing.Size(231, 64);
-            this.bunifuLabel3.TabIndex = 6;
-            this.bunifuLabel3.Text = "EBRMS for Our Lady \r\nof Hope Parish";
-            this.bunifuLabel3.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.bunifuLabel3.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::EBRMS.Properties.Resources.logo_ebrms;
@@ -376,16 +342,38 @@ namespace EBRMS
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Impact", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(66, 353);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(321, 92);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "EBRMS for Our Lady \r\nof Hope Parish\r\n";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(474, 169);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 38);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Login\r\n";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(863, 554);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -406,12 +394,12 @@ namespace EBRMS
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox pbClose;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLogin;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuTextBox txtPassword;
         private Bunifu.UI.WinForms.BunifuTextBox txtUsername;
         private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

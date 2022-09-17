@@ -18,6 +18,24 @@ namespace EBRMS.Secretary
             InitializeComponent();
         }
 
+        private void frmMainPriest_Load(object sender, EventArgs e)
+        {
+            lblUserName.Text = frmLogin.GetUserName.ToString();
+            lblUserRole.Text = frmLogin.GetUserRole.ToString();
+        }
+
+        private void pbLogout_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Do you want to Logout?", "Log-out", MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                frmLogin login = new frmLogin();
+                this.Hide();
+                login.Show();
+
+            }
+        }
+
         private void btnBooking_Click(object sender, EventArgs e)
         {
             if (!panelModule.Controls.Contains(ucBookingManagement.bookingInstance))
@@ -34,28 +52,7 @@ namespace EBRMS.Secretary
 
         private void btnSearchRecords_Click(object sender, EventArgs e)
         {
-            if (!panelModule.Controls.Contains(ucRecords.recordsInstance))
-            {
-                panelModule.Controls.Add(ucRecords.recordsInstance);
-                ucRecords.recordsInstance.Dock = DockStyle.Fill;
-                ucRecords.recordsInstance.BringToFront();
-            }
-            else
-            {
-                ucRecords.recordsInstance.BringToFront();
-            }
-        }
 
-        private void pbLogout_Click(object sender, EventArgs e)
-        {
-            DialogResult dialog = MessageBox.Show("Do you want to Logout?", "Log-out", MessageBoxButtons.YesNo);
-            if (dialog == DialogResult.Yes)
-            {
-                frmLogin login = new frmLogin();
-                this.Hide();
-                login.Show();
-
-            }
         }
     }
 }

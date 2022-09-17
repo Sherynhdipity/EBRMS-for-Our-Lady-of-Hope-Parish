@@ -33,30 +33,30 @@ namespace EBRMS.Priest
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pbLogout = new System.Windows.Forms.PictureBox();
-            this.btnSchedules = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnUsers = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblUserName = new Bunifu.UI.WinForms.BunifuLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblUserRole = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelModule = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pbLogout = new System.Windows.Forms.PictureBox();
+            this.btnSchedules = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnUsers = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogout)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.pbLogout);
             this.panel1.Controls.Add(this.btnSchedules);
             this.panel1.Controls.Add(this.btnUsers);
-            this.panel1.Controls.Add(this.bunifuLabel2);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.panel1.Location = new System.Drawing.Point(-5, -15);
@@ -65,10 +65,78 @@ namespace EBRMS.Priest
             this.panel1.Size = new System.Drawing.Size(416, 1010);
             this.panel1.TabIndex = 0;
             // 
+            // lblUserName
+            // 
+            this.lblUserName.AllowParentOverrides = false;
+            this.lblUserName.AutoEllipsis = false;
+            this.lblUserName.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblUserName.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblUserName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.ForeColor = System.Drawing.Color.White;
+            this.lblUserName.Location = new System.Drawing.Point(1468, 38);
+            this.lblUserName.Margin = new System.Windows.Forms.Padding(4);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblUserName.Size = new System.Drawing.Size(79, 21);
+            this.lblUserName.TabIndex = 12;
+            this.lblUserName.Text = "user name";
+            this.lblUserName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblUserName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.panel2.Controls.Add(this.lblUserRole);
+            this.panel2.Controls.Add(this.pictureBox3);
+            this.panel2.Controls.Add(this.lblUserName);
+            this.panel2.Location = new System.Drawing.Point(-1, -11);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1715, 98);
+            this.panel2.TabIndex = 13;
+            // 
+            // lblUserRole
+            // 
+            this.lblUserRole.AllowParentOverrides = false;
+            this.lblUserRole.AutoEllipsis = false;
+            this.lblUserRole.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblUserRole.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblUserRole.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserRole.ForeColor = System.Drawing.Color.White;
+            this.lblUserRole.Location = new System.Drawing.Point(1475, 59);
+            this.lblUserRole.Margin = new System.Windows.Forms.Padding(4);
+            this.lblUserRole.Name = "lblUserRole";
+            this.lblUserRole.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblUserRole.Size = new System.Drawing.Size(66, 21);
+            this.lblUserRole.TabIndex = 13;
+            this.lblUserRole.Text = "user role";
+            this.lblUserRole.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblUserRole.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // panelModule
+            // 
+            this.panelModule.BackColor = System.Drawing.SystemColors.Control;
+            this.panelModule.Location = new System.Drawing.Point(408, 81);
+            this.panelModule.Margin = new System.Windows.Forms.Padding(4);
+            this.panelModule.Name = "panelModule";
+            this.panelModule.Size = new System.Drawing.Size(1301, 900);
+            this.panelModule.TabIndex = 14;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::EBRMS.Properties.Resources.R;
+            this.pictureBox3.Location = new System.Drawing.Point(1617, 32);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(52, 48);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 12;
+            this.pictureBox3.TabStop = false;
+            // 
             // pbLogout
             // 
             this.pbLogout.Image = global::EBRMS.Properties.Resources.e17b07ddedc0cf14c89e0702946475c5;
-            this.pbLogout.Location = new System.Drawing.Point(21, 934);
+            this.pbLogout.Location = new System.Drawing.Point(21, 873);
             this.pbLogout.Margin = new System.Windows.Forms.Padding(4);
             this.pbLogout.Name = "pbLogout";
             this.pbLogout.Size = new System.Drawing.Size(53, 50);
@@ -166,6 +234,7 @@ namespace EBRMS.Priest
             this.btnSchedules.TextMarginLeft = 0;
             this.btnSchedules.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnSchedules.UseDefaultRadiusAndThickness = true;
+            this.btnSchedules.Click += new System.EventHandler(this.btnSchedules_Click);
             // 
             // btnUsers
             // 
@@ -258,23 +327,6 @@ namespace EBRMS.Priest
             this.btnUsers.UseDefaultRadiusAndThickness = true;
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
-            // bunifuLabel2
-            // 
-            this.bunifuLabel2.AllowParentOverrides = false;
-            this.bunifuLabel2.AutoEllipsis = false;
-            this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel2.Font = new System.Drawing.Font("Impact", 18F);
-            this.bunifuLabel2.Location = new System.Drawing.Point(129, 448);
-            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuLabel2.Name = "bunifuLabel2";
-            this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(153, 74);
-            this.bunifuLabel2.TabIndex = 8;
-            this.bunifuLabel2.Text = "OUR LADY OF \r\nHOPE PARISH";
-            this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::EBRMS.Properties.Resources.received_632071118312447;
@@ -286,73 +338,16 @@ namespace EBRMS.Priest
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
-            // lblUserName
+            // label2
             // 
-            this.lblUserName.AllowParentOverrides = false;
-            this.lblUserName.AutoEllipsis = false;
-            this.lblUserName.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblUserName.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblUserName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.ForeColor = System.Drawing.Color.White;
-            this.lblUserName.Location = new System.Drawing.Point(1468, 38);
-            this.lblUserName.Margin = new System.Windows.Forms.Padding(4);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblUserName.Size = new System.Drawing.Size(79, 21);
-            this.lblUserName.TabIndex = 12;
-            this.lblUserName.Text = "user name";
-            this.lblUserName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblUserName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.panel2.Controls.Add(this.lblUserRole);
-            this.panel2.Controls.Add(this.pictureBox3);
-            this.panel2.Controls.Add(this.lblUserName);
-            this.panel2.Location = new System.Drawing.Point(-1, -11);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1715, 98);
-            this.panel2.TabIndex = 13;
-            // 
-            // lblUserRole
-            // 
-            this.lblUserRole.AllowParentOverrides = false;
-            this.lblUserRole.AutoEllipsis = false;
-            this.lblUserRole.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblUserRole.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblUserRole.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserRole.ForeColor = System.Drawing.Color.White;
-            this.lblUserRole.Location = new System.Drawing.Point(1475, 59);
-            this.lblUserRole.Margin = new System.Windows.Forms.Padding(4);
-            this.lblUserRole.Name = "lblUserRole";
-            this.lblUserRole.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblUserRole.Size = new System.Drawing.Size(66, 21);
-            this.lblUserRole.TabIndex = 13;
-            this.lblUserRole.Text = "user role";
-            this.lblUserRole.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblUserRole.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::EBRMS.Properties.Resources.R;
-            this.pictureBox3.Location = new System.Drawing.Point(1617, 32);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(52, 48);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
-            // 
-            // panelModule
-            // 
-            this.panelModule.BackColor = System.Drawing.SystemColors.Control;
-            this.panelModule.Location = new System.Drawing.Point(408, 81);
-            this.panelModule.Margin = new System.Windows.Forms.Padding(4);
-            this.panelModule.Name = "panelModule";
-            this.panelModule.Size = new System.Drawing.Size(1301, 900);
-            this.panelModule.TabIndex = 14;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Impact", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(76, 443);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(269, 96);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "OUR LADY \r\nOF HOPE PARISH";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmMainPriest
             // 
@@ -370,11 +365,11 @@ namespace EBRMS.Priest
             this.Load += new System.EventHandler(this.frmMainPriest_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogout)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -383,7 +378,6 @@ namespace EBRMS.Priest
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private System.Windows.Forms.PictureBox pbLogout;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSchedules;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnUsers;
@@ -392,5 +386,6 @@ namespace EBRMS.Priest
         private Bunifu.UI.WinForms.BunifuLabel lblUserRole;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panelModule;
+        private System.Windows.Forms.Label label2;
     }
 }

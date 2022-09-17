@@ -53,5 +53,19 @@ namespace EBRMS.Priest
 
             }
         }
+
+        private void btnSchedules_Click(object sender, EventArgs e)
+        {
+            if (!panelModule.Controls.Contains(ucScheduleManagement.scheduleInstance))
+            {
+                panelModule.Controls.Add(ucScheduleManagement.scheduleInstance);
+                ucScheduleManagement.scheduleInstance.Dock = DockStyle.Fill;
+                ucScheduleManagement.scheduleInstance.BringToFront();
+            }
+            else
+            {
+                ucScheduleManagement.scheduleInstance.BringToFront();
+            }
+        }
     }
 }
