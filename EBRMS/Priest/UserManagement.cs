@@ -27,10 +27,6 @@ namespace EBRMS.Priest
             btn.Text = "Update";
             btn.UseColumnTextForButtonValue = true;
 
-            btn1.Name = "";
-            btn1.Text = "Activate";
-            btn1.UseColumnTextForButtonValue = true;
-
             dgvUsers.Columns.Add(btn);
         }
 
@@ -126,7 +122,10 @@ namespace EBRMS.Priest
 
         private void ucUserManagement_Load(object sender, EventArgs e)
         {
-            DisplayUser();
+            timer1 = new System.Windows.Forms.Timer();
+            timer1.Interval = 5000;
+            timer1.Tick += new System.EventHandler(timer1_Tick);
+            timer1.Start();
         }
 
         private void dgvUsers_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -136,6 +135,11 @@ namespace EBRMS.Priest
                 updateUser.Id = dgvUsers[1, e.RowIndex].Value.ToString();
                 updateUser.ShowDialog();
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DisplayUser();
         }
     }
 }

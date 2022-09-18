@@ -17,6 +17,7 @@ namespace EBRMS.Priest
         public frmAddSchedule()
         {
             InitializeComponent();
+            lblUserID.Text = frmLogin.GetUserID.ToString();
         }
 
         public static SqlConnection con = new SqlConnection(DBConnection.con);
@@ -27,6 +28,7 @@ namespace EBRMS.Priest
         public static DialogResult result;
         public static string QueryInsert;
         public static string QuerySelect;
+        public static string status = "Available";
 
         //clear controls
         public void ClearControls()
@@ -50,11 +52,13 @@ namespace EBRMS.Priest
                 {
                     con.Close();
                     con.Open();
-                    QuerySelect = "SELECT * FROM tblSchedule WHERE s_Date = @sDate AND s_Time = @sTime";
+                    QuerySelect = "SELECT * FROM tblSchedule WHERE s_Date = @sDate AND s_Time = @sTime AND s_status = @status";
 
                     cmd = new SqlCommand(QuerySelect, con);
                     cmd.Parameters.AddWithValue("@sDate", dtpAvailableSched.Value.Date);
                     cmd.Parameters.AddWithValue("@sTime", cmbTime.SelectedItem.ToString());
+                    cmd.Parameters.AddWithValue("@status", status);
+
 
                     reader = cmd.ExecuteReader();
 
@@ -68,12 +72,14 @@ namespace EBRMS.Priest
                         {
                             con.Close();
                             con.Open();
-                            QueryInsert = "INSERT INTO tblSchedule (s_Date,s_Time)" +
-                            "VALUES (@sDate, @sTime)";
+                            QueryInsert = "INSERT INTO tblSchedule (s_Date,s_Time, userID, s_status)" +
+                            "VALUES (@sDate, @sTime,@uID,@status)";
 
                             cmd = new SqlCommand(QueryInsert, con);
                             cmd.Parameters.AddWithValue("@sDate", dtpAvailableSched.Value.Date);
                             cmd.Parameters.AddWithValue("@sTime", cmbTime.SelectedItem.ToString());
+                            cmd.Parameters.AddWithValue("@uID", Convert.ToInt32(lblUserID.Text));
+                            cmd.Parameters.AddWithValue("@status", status);
 
                             cmd.ExecuteNonQuery();
 

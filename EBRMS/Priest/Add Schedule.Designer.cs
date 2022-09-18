@@ -32,13 +32,14 @@ namespace EBRMS.Priest
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddSchedule));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pbClose = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbTime = new Bunifu.UI.WinForms.BunifuDropdown();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpAvailableSched = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.btnSave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.pbClose = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblUserID = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
             this.SuspendLayout();
@@ -53,6 +54,29 @@ namespace EBRMS.Priest
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(406, 50);
             this.panel1.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(15, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(179, 25);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "ADD SCHEDULE";
+            // 
+            // pbClose
+            // 
+            this.pbClose.Image = global::EBRMS.Properties.Resources._211652_close_icon;
+            this.pbClose.Location = new System.Drawing.Point(352, 3);
+            this.pbClose.Margin = new System.Windows.Forms.Padding(4);
+            this.pbClose.Name = "pbClose";
+            this.pbClose.Size = new System.Drawing.Size(42, 42);
+            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbClose.TabIndex = 6;
+            this.pbClose.TabStop = false;
+            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
             // 
             // label1
             // 
@@ -240,34 +264,23 @@ namespace EBRMS.Priest
             this.btnSave.UseDefaultRadiusAndThickness = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // pbClose
+            // lblUserID
             // 
-            this.pbClose.Image = global::EBRMS.Properties.Resources._211652_close_icon;
-            this.pbClose.Location = new System.Drawing.Point(352, 3);
-            this.pbClose.Margin = new System.Windows.Forms.Padding(4);
-            this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(42, 42);
-            this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbClose.TabIndex = 6;
-            this.pbClose.TabStop = false;
-            this.pbClose.Click += new System.EventHandler(this.pbClose_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(15, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(224, 31);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "ADD SCHEDULE";
+            this.lblUserID.AutoSize = true;
+            this.lblUserID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserID.Location = new System.Drawing.Point(279, 75);
+            this.lblUserID.Name = "lblUserID";
+            this.lblUserID.Size = new System.Drawing.Size(69, 25);
+            this.lblUserID.TabIndex = 19;
+            this.lblUserID.Text = "userID";
+            this.lblUserID.Visible = false;
             // 
             // frmAddSchedule
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(400, 383);
+            this.Controls.Add(this.lblUserID);
             this.Controls.Add(this.dtpAvailableSched);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbTime);
@@ -297,5 +310,6 @@ namespace EBRMS.Priest
         private System.Windows.Forms.Label label2;
         private Bunifu.UI.WinForms.BunifuDatePicker dtpAvailableSched;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblUserID;
     }
 }

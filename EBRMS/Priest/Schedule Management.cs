@@ -33,6 +33,7 @@ namespace EBRMS.Priest
 
             dgvAvailSchedule.Columns.Add(btnupdate);
 
+
         }
 
         void Form_Closed(object sender, FormClosedEventArgs e)
@@ -72,14 +73,19 @@ namespace EBRMS.Priest
         public static string QueryInsert;
         public static string QuerySelect;
         public static string QueryUpdate;
+        
+
 
         public void DisplaySchedule()
         {
             try
             {
-                QuerySelect = "SELECT * FROM vwAvailableSched";
+                int userID = Convert.ToInt32(frmLogin.GetUserID.ToString());
+
+                QuerySelect = "SELECT scheduleID AS ID, s_Date AS Date, s_Time AS Time FROM dbo.tblSchedule INNER JOIN tblUsers ON tblSchedule.userID = tblUsers.userID WHERE tblUsers.userID = @uID";
 
                 cmd = new SqlCommand(QuerySelect, con);
+                cmd.Parameters.AddWithValue("@uID", userID);
                 adapter = new SqlDataAdapter(cmd);
                 dt = new DataTable();
                 adapter.Fill(dt);
@@ -89,7 +95,7 @@ namespace EBRMS.Priest
             catch (Exception ex)
             {
 
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.StackTrace);
             }
             finally
             {
@@ -110,6 +116,19 @@ namespace EBRMS.Priest
                 updateSched.Id = dgvAvailSchedule[1, e.RowIndex].Value.ToString();
                 updateSched.ShowDialog();
             }
+        }
+
+        private void ucScheduleManagement_Load(object sender, EventArgs e)
+        {
+            timer1 = new System.Windows.Forms.Timer();
+            timer1.Interval = 5000;
+            timer1.Tick += new System.EventHandler(timer1_Tick);
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DisplaySchedule();
         }
     }
 }

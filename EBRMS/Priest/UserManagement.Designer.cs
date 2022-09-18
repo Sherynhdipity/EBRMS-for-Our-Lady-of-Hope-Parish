@@ -29,6 +29,7 @@ namespace EBRMS.Priest
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucUserManagement));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -43,6 +44,7 @@ namespace EBRMS.Priest
             this.dgvUsers = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.txtViewUsers = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnAddUser = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,10 +55,11 @@ namespace EBRMS.Priest
             this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel1.Font = new System.Drawing.Font("Impact", 26.25F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(43, 71);
+            this.bunifuLabel1.Location = new System.Drawing.Point(57, 87);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(264, 43);
+            this.bunifuLabel1.Size = new System.Drawing.Size(331, 54);
             this.bunifuLabel1.TabIndex = 4;
             this.bunifuLabel1.Text = "USER MANAGEMENT";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -69,10 +72,11 @@ namespace EBRMS.Priest
             this.bunifuLabel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.bunifuLabel2.Location = new System.Drawing.Point(43, 213);
+            this.bunifuLabel2.Location = new System.Drawing.Point(57, 262);
+            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel2.Size = new System.Drawing.Size(85, 21);
+            this.bunifuLabel2.Size = new System.Drawing.Size(104, 28);
             this.bunifuLabel2.TabIndex = 12;
             this.bunifuLabel2.Text = "List of Users";
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -130,13 +134,15 @@ namespace EBRMS.Priest
             this.dgvUsers.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvUsers.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvUsers.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvUsers.Location = new System.Drawing.Point(43, 240);
+            this.dgvUsers.Location = new System.Drawing.Point(57, 295);
+            this.dgvUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
             this.dgvUsers.RowHeadersVisible = false;
+            this.dgvUsers.RowHeadersWidth = 51;
             this.dgvUsers.RowTemplate.Height = 40;
             this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsers.Size = new System.Drawing.Size(882, 450);
+            this.dgvUsers.Size = new System.Drawing.Size(1176, 554);
             this.dgvUsers.TabIndex = 13;
             this.dgvUsers.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentClick);
@@ -168,7 +174,8 @@ namespace EBRMS.Priest
             this.txtViewUsers.IconRight = null;
             this.txtViewUsers.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtViewUsers.Lines = new string[0];
-            this.txtViewUsers.Location = new System.Drawing.Point(43, 148);
+            this.txtViewUsers.Location = new System.Drawing.Point(57, 182);
+            this.txtViewUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtViewUsers.MaxLength = 32767;
             this.txtViewUsers.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtViewUsers.Modified = false;
@@ -194,7 +201,7 @@ namespace EBRMS.Priest
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtViewUsers.OnIdleState = stateProperties4;
-            this.txtViewUsers.Padding = new System.Windows.Forms.Padding(3);
+            this.txtViewUsers.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtViewUsers.PasswordChar = '\0';
             this.txtViewUsers.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtViewUsers.PlaceholderText = "Search Users";
@@ -204,7 +211,7 @@ namespace EBRMS.Priest
             this.txtViewUsers.SelectionLength = 0;
             this.txtViewUsers.SelectionStart = 0;
             this.txtViewUsers.ShortcutsEnabled = true;
-            this.txtViewUsers.Size = new System.Drawing.Size(763, 37);
+            this.txtViewUsers.Size = new System.Drawing.Size(1017, 46);
             this.txtViewUsers.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtViewUsers.TabIndex = 11;
             this.txtViewUsers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -263,7 +270,8 @@ namespace EBRMS.Priest
             this.btnAddUser.IdleIconLeftImage = null;
             this.btnAddUser.IdleIconRightImage = null;
             this.btnAddUser.IndicateFocus = false;
-            this.btnAddUser.Location = new System.Drawing.Point(824, 146);
+            this.btnAddUser.Location = new System.Drawing.Point(1099, 180);
+            this.btnAddUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAddUser.OnDisabledState.BorderRadius = 10;
@@ -297,7 +305,7 @@ namespace EBRMS.Priest
             this.btnAddUser.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnAddUser.OnPressedState.IconLeftImage = null;
             this.btnAddUser.OnPressedState.IconRightImage = null;
-            this.btnAddUser.Size = new System.Drawing.Size(101, 39);
+            this.btnAddUser.Size = new System.Drawing.Size(135, 48);
             this.btnAddUser.TabIndex = 10;
             this.btnAddUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddUser.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -306,17 +314,22 @@ namespace EBRMS.Priest
             this.btnAddUser.UseDefaultRadiusAndThickness = true;
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // ucUserManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.bunifuLabel2);
             this.Controls.Add(this.txtViewUsers);
             this.Controls.Add(this.btnAddUser);
             this.Controls.Add(this.bunifuLabel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ucUserManagement";
-            this.Size = new System.Drawing.Size(976, 740);
+            this.Size = new System.Drawing.Size(1301, 911);
             this.Load += new System.EventHandler(this.ucUserManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.ResumeLayout(false);
@@ -331,5 +344,6 @@ namespace EBRMS.Priest
         private Bunifu.UI.WinForms.BunifuTextBox txtViewUsers;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvUsers;
+        private System.Windows.Forms.Timer timer1;
     }
 }

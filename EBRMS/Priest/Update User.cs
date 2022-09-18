@@ -141,7 +141,7 @@ namespace EBRMS.Priest
                             con.Close();
                             con.Open();
 
-                            QueryUpdate = "UPDATE tblUsers SET FirstName = @fName, LastName = @lName, Username = @userName, Password = @password,UserType = @userType WHERE UserID = '" + id + "'";
+                            QueryUpdate = "UPDATE tblUsers SET firstName = @fName, lastName = @lName, username = @userName, password = @password,userType = @userType WHERE userID = '" + id + "'";
 
                             cmd = new SqlCommand(QueryUpdate, con);
 
@@ -189,7 +189,7 @@ namespace EBRMS.Priest
             try
             {
                 con.Open();
-                QuerySelect = "SELECT * from tblUsers WHERE UserID = '" + id + "'";
+                QuerySelect = "SELECT * from tblUsers WHERE userID = '" + id + "'";
 
 
                 cmd = new SqlCommand(QuerySelect, con);
@@ -198,20 +198,20 @@ namespace EBRMS.Priest
                 adapter.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    txtFirstName.Text = dt.Rows[0]["FirstName"].ToString(); 
-                    txtLastName.Text = dt.Rows[0]["LastName"].ToString();
-                    txtUsername.Text = dt.Rows[0]["Username"].ToString();
-                    txtPassword.Text = dt.Rows[0]["Password"].ToString();
-                    txtConfirmPassword.Text = dt.Rows[0]["Password"].ToString();
-                    if (dt.Rows[0]["UserType"].ToString() == "Priest")
+                    txtFirstName.Text = dt.Rows[0]["firstName"].ToString(); 
+                    txtLastName.Text = dt.Rows[0]["lastName"].ToString();
+                    txtUsername.Text = dt.Rows[0]["username"].ToString();
+                    txtPassword.Text = dt.Rows[0]["password"].ToString();
+                    txtConfirmPassword.Text = dt.Rows[0]["password"].ToString();
+                    if (dt.Rows[0]["userType"].ToString() == "Priest")
                     {
                         cmbRole.SelectedIndex = 0;
                     }
-                    else if (dt.Rows[0]["UserType"].ToString() == "Secretary")
+                    else if (dt.Rows[0]["userType"].ToString() == "Secretary")
                     {
                         cmbRole.SelectedIndex = 1;
                     }
-                    else if (dt.Rows[0]["User_type"].ToString() == "Treasurer")
+                    else if (dt.Rows[0]["user_type"].ToString() == "Treasurer")
                     {
                         cmbRole.SelectedIndex = 2;
                     }

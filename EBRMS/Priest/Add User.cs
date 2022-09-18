@@ -144,7 +144,7 @@ namespace EBRMS.Priest
                             {
                                 con.Close();
                                 con.Open();
-                                QueryInsert = "INSERT INTO tblUsers (Username,FirstName, LastName, Password,UserType)" +
+                                QueryInsert = "INSERT INTO tblUsers (username,firstName, lastName, password,userType)" +
                                 "VALUES (@username, @fName, @lName,@password, @userType)";
 
                                 cmd = new SqlCommand(QueryInsert, con);

@@ -65,7 +65,7 @@ namespace EBRMS
 
                     con.Open();
 
-                    QuerySelect = "Select UserID, Username, FirstName, LastName, Password, UserType from tblUsers WHERE Username= @uName AND Password= @pass";
+                    QuerySelect = "Select userID, username, firstName, lastName, password, userType from tblUsers WHERE username= @uName AND password= @pass";
                     cmd = new SqlCommand(QuerySelect, con);
                     cmd.Parameters.AddWithValue("@uName", txtUsername.Text);
                     cmd.Parameters.AddWithValue("@pass", txtPassword.Text);
@@ -73,13 +73,13 @@ namespace EBRMS
                     if (reader.HasRows)
                     {
                         reader.Read();
-                        string fName = reader["FirstName"].ToString();
-                        string lName = reader["LastName"].ToString();
+                        string fName = reader["firstName"].ToString();
+                        string lName = reader["lastName"].ToString();
 
-                        GetUserID = reader["UserID"].ToString();
+                        GetUserID = reader["userID"].ToString();
                         GetUserName = fName + " " + lName;
-                        GetUserUsername = reader["Username"].ToString();
-                        GetUserRole = reader["UserType"].ToString();
+                        GetUserUsername = reader["username"].ToString();
+                        GetUserRole = reader["userType"].ToString();
 
                         switch (reader[5].ToString())
                         {

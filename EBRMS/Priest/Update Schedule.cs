@@ -53,7 +53,7 @@ namespace EBRMS.Priest
                     con.Close();
                     con.Open();
                     
-                    QueryUpdate = "UPDATE tblSchedule SET s_Date = @sDate, s_Time = @sTime WHERE schedule_id = '" + id + "'";
+                    QueryUpdate = "UPDATE tblSchedule SET s_Date = @sDate, s_Time = @sTime WHERE scheduleID = '" + id + "'";
 
                     cmd = new SqlCommand(QueryUpdate, con);
 
@@ -88,7 +88,7 @@ namespace EBRMS.Priest
             try
             {
                 con.Open();
-                QuerySelect = "SELECT * from tblSchedule WHERE schedule_id = '" + id + "'";
+                QuerySelect = "SELECT * from tblSchedule WHERE scheduleID = '" + id + "'";
 
 
                 cmd = new SqlCommand(QuerySelect, con);
