@@ -82,7 +82,7 @@ namespace EBRMS.Priest
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(40, 81);
+            this.label1.Location = new System.Drawing.Point(41, 97);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(150, 25);
             this.label1.TabIndex = 15;
@@ -128,7 +128,7 @@ namespace EBRMS.Priest
             "12:00 PM - 2:00 PM",
             "2:00 PM - 4:00 PM"});
             this.cmbTime.ItemTopMargin = 3;
-            this.cmbTime.Location = new System.Drawing.Point(45, 215);
+            this.cmbTime.Location = new System.Drawing.Point(46, 231);
             this.cmbTime.Margin = new System.Windows.Forms.Padding(4);
             this.cmbTime.Name = "cmbTime";
             this.cmbTime.Size = new System.Drawing.Size(320, 32);
@@ -141,7 +141,7 @@ namespace EBRMS.Priest
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(40, 186);
+            this.label2.Location = new System.Drawing.Point(41, 202);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 25);
             this.label2.TabIndex = 17;
@@ -165,7 +165,7 @@ namespace EBRMS.Priest
             this.dtpAvailableSched.IconColor = System.Drawing.Color.Gray;
             this.dtpAvailableSched.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtpAvailableSched.LeftTextMargin = 5;
-            this.dtpAvailableSched.Location = new System.Drawing.Point(45, 118);
+            this.dtpAvailableSched.Location = new System.Drawing.Point(46, 134);
             this.dtpAvailableSched.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtpAvailableSched.Name = "dtpAvailableSched";
             this.dtpAvailableSched.Size = new System.Drawing.Size(320, 34);
