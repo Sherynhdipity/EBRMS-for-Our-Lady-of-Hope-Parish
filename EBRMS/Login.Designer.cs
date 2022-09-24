@@ -29,7 +29,6 @@ namespace EBRMS
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -40,24 +39,28 @@ namespace EBRMS
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtUsername = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.btnLogin = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuGradientPanel1 = new Bunifu.UI.WinForms.BunifuGradientPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lnklblForgot = new System.Windows.Forms.LinkLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).BeginInit();
-            this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // bunifuElipse1
+            // pictureBox1
             // 
-            this.bunifuElipse1.ElipseRadius = 50;
-            this.bunifuElipse1.TargetControl = this;
+            this.pictureBox1.Image = global::EBRMS.Properties.Resources.circle;
+            this.pictureBox1.Location = new System.Drawing.Point(-169, -85);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(725, 898);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
             // 
             // txtUsername
             // 
@@ -86,7 +89,7 @@ namespace EBRMS
             this.txtUsername.IconRight = null;
             this.txtUsername.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.Lines = new string[0];
-            this.txtUsername.Location = new System.Drawing.Point(471, 224);
+            this.txtUsername.Location = new System.Drawing.Point(471, 209);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.MinimumSize = new System.Drawing.Size(1, 1);
@@ -123,7 +126,7 @@ namespace EBRMS
             this.txtUsername.SelectionLength = 0;
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.ShortcutsEnabled = true;
-            this.txtUsername.Size = new System.Drawing.Size(347, 46);
+            this.txtUsername.Size = new System.Drawing.Size(346, 46);
             this.txtUsername.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtUsername.TabIndex = 1;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -133,6 +136,7 @@ namespace EBRMS
             this.txtUsername.TextPlaceholder = "Enter Username";
             this.txtUsername.UseSystemPasswordChar = false;
             this.txtUsername.WordWrap = true;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtPassword
             // 
@@ -212,10 +216,10 @@ namespace EBRMS
             // pbClose
             // 
             this.pbClose.Image = global::EBRMS.Properties.Resources._211652_close_icon;
-            this.pbClose.Location = new System.Drawing.Point(764, 37);
+            this.pbClose.Location = new System.Drawing.Point(792, 25);
             this.pbClose.Margin = new System.Windows.Forms.Padding(4);
             this.pbClose.Name = "pbClose";
-            this.pbClose.Size = new System.Drawing.Size(53, 42);
+            this.pbClose.Size = new System.Drawing.Size(39, 42);
             this.pbClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbClose.TabIndex = 5;
             this.pbClose.TabStop = false;
@@ -312,77 +316,62 @@ namespace EBRMS
             this.btnLogin.UseDefaultRadiusAndThickness = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // bunifuGradientPanel1
-            // 
-            this.bunifuGradientPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.BorderRadius = 1;
-            this.bunifuGradientPanel1.Controls.Add(this.label2);
-            this.bunifuGradientPanel1.Controls.Add(this.pictureBox2);
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.DodgerBlue;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.CornflowerBlue;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.Gray;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(-23, 2);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(425, 580);
-            this.bunifuGradientPanel1.TabIndex = 0;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::EBRMS.Properties.Resources.logo_ebrms;
-            this.pictureBox2.Location = new System.Drawing.Point(4, 56);
+            this.pictureBox2.Location = new System.Drawing.Point(113, 105);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(452, 325);
+            this.pictureBox2.Size = new System.Drawing.Size(290, 322);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Impact", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(66, 353);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(321, 92);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "EBRMS for Our Lady \r\nof Hope Parish\r\n";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(474, 169);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(471, 151);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 38);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "Login\r\n";
+            this.label1.Size = new System.Drawing.Size(91, 32);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Login";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lnklblForgot
+            // 
+            this.lnklblForgot.AutoSize = true;
+            this.lnklblForgot.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnklblForgot.Location = new System.Drawing.Point(678, 498);
+            this.lnklblForgot.Name = "lnklblForgot";
+            this.lnklblForgot.Size = new System.Drawing.Size(138, 20);
+            this.lnklblForgot.TabIndex = 19;
+            this.lnklblForgot.TabStop = true;
+            this.lnklblForgot.Text = "forgot password?";
+            this.lnklblForgot.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnklblForgot_LinkClicked);
             // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(863, 554);
+            this.Controls.Add(this.lnklblForgot);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.pbClose);
             this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.bunifuGradientPanel1);
+            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
-            this.bunifuGradientPanel1.ResumeLayout(false);
-            this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -390,16 +379,14 @@ namespace EBRMS
         }
 
         #endregion
-
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox pbClose;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLogin;
         private Bunifu.UI.WinForms.BunifuTextBox txtPassword;
         private Bunifu.UI.WinForms.BunifuTextBox txtUsername;
-        private Bunifu.UI.WinForms.BunifuGradientPanel bunifuGradientPanel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.LinkLabel lnklblForgot;
     }
 }
 

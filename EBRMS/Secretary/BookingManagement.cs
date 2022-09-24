@@ -42,7 +42,7 @@ namespace EBRMS.Secretary
         public static string QuerySelect;
 
 
-        ////AddBooking - Baptism
+        //AddBooking - Baptism
         //public void BaptismBooking()
         //{
         //    con.Close();

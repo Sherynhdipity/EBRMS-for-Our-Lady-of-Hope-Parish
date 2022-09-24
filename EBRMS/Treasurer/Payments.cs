@@ -49,12 +49,35 @@ namespace EBRMS.Treasurer
             txtFirstName.Clear();
             txtLastName.Clear();
             txtMiddleName.Clear();
-            txtAmountWord.Clear();
             cmbProvince.SelectedIndex = 0;
             cmbMunicipality.SelectedIndex = 0;
             cmbBarangay.SelectedIndex = 0;
             cmbPaymentMode.SelectedIndex = 0;
             cmbPaymentType.SelectedIndex = 0;
+        }
+
+        public void DisplayClients()
+        {
+            try
+            {
+                con.Open();
+                QuerySelect = "SELECT * FROM vwClients)";
+
+                cmd = new SqlCommand(QuerySelect, con);
+                adapter = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                adapter.Fill(dt);
+                dgvClients.DataSource = dt;
+                dgvClients.Refresh();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
 
         void GenerateReceipt()
@@ -78,16 +101,14 @@ namespace EBRMS.Treasurer
             TextObject clientAdd = (TextObject)receiptRPT.ReportDefinition.Sections["Section3"].ReportObjects["clientAddress"];
             clientAdd.Text = cmbBarangay.Text + " " + cmbMunicipality.Text + " " + cmbProvince.Text;
 
-            //PH - PAYMENT DETAILS
 
-            TextObject sumWord = (TextObject)receiptRPT.ReportDefinition.Sections["Section3"].ReportObjects["amtWord"];
-            sumWord.Text = txtAmountWord.Text;
+            //PH - PAYMENT DETAILS
 
             TextObject sumDigit = (TextObject)receiptRPT.ReportDefinition.Sections["Section3"].ReportObjects["amtDigit"];
             sumDigit.Text = txtAmountDigit.Text;
 
             TextObject paymentType = (TextObject)receiptRPT.ReportDefinition.Sections["Section3"].ReportObjects["paymentType"];
-            paymentType.Text = cmbPaymentType.Text; 
+            paymentType.Text = cmbPaymentType.Text;
 
             TextObject paymentMode = (TextObject)receiptRPT.ReportDefinition.Sections["Section3"].ReportObjects["paymentMode"];
             paymentMode.Text = cmbPaymentMode.Text;
@@ -130,16 +151,6 @@ namespace EBRMS.Treasurer
                 MessageBox.Show("Whitespace is not allowed!");
                 txtMiddleName.Clear();
             }
-            else if (String.IsNullOrEmpty(txtAmountWord.Text))
-            {
-                MessageBox.Show("Enter Password!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtAmountWord.Focus();
-            }
-            else if (String.IsNullOrWhiteSpace(txtAmountWord.Text))
-            {
-                MessageBox.Show("Whitespace is not allowed!");
-                txtAmountWord.Clear();
-            }
             else if (!Regex.IsMatch(txtFirstName.Text, @"^([a-zA-Z-.]+?)([-\s'][a-zA-Z]+)*?$"))
             {
                 MessageBox.Show("First Name must be in letters only");
@@ -159,7 +170,7 @@ namespace EBRMS.Treasurer
             {
                 MessageBox.Show("Phone number must be 11 digit only");
             }
-            else if (txtFirstName.Text != "" && txtLastName.Text != "" && txtMiddleName.Text != "" && txtAmountWord.Text != "" && txtAmountDigit.Text != "" && txtORNo.Text != "" && txtContactNo.Text != "")
+            else if (txtFirstName.Text != "" && txtLastName.Text != "" && txtMiddleName.Text != "" && txtAmountDigit.Text != "" && txtORNo.Text != "" && txtContactNo.Text != "")
             {
                 result = MessageBox.Show("Confirm Payment?", "Settle Payment", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
@@ -309,6 +320,7 @@ namespace EBRMS.Treasurer
         {
             lblTransDate.Text = DateTime.Now.ToString("MMMM, dd, yyyy");
             loadProvinces();
+            DisplayClients();
         }
 
         private void cmbProvince_SelectedIndexChanged(object sender, EventArgs e)
@@ -324,6 +336,43 @@ namespace EBRMS.Treasurer
         private void btnPay_Click(object sender, EventArgs e)
         {
             TransactPayment();
+        }
+
+        private void txtSearch_TextChange(object sender, EventArgs e)
+        {
+            try
+            {
+                if(txtSearch.Text != "")
+                {
+                    con.Close();
+                    con.Open();
+                    QuerySelect = "SELECT * FROM tblClient WHERE c_FN = @fName OR c_MN = @mName OR c_lN = @lName";
+
+                    cmd = new SqlCommand(QuerySelect, con);
+                    cmd.Parameters.AddWithValue("@fName", txtSearch.Text);
+                    cmd.Parameters.AddWithValue("@mName", txtSearch.Text);
+                    cmd.Parameters.AddWithValue("@lName", txtSearch.Text);
+
+                    reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        pnlClient.Visible = true;
+                        lblCFName.Text = reader[1].ToString();
+                        lblCMName.Text = reader[2].ToString();
+                        lblCLName.Text = reader[3].ToString();
+                        lblCCNo.Text = reader[4].ToString();
+                    }
+                }               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                con.Close();
+            }
         }
     }
 }

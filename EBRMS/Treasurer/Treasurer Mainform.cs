@@ -49,5 +49,19 @@ namespace EBRMS.Treasurer
                 ucPayments.paymentsInstance.BringToFront();
             }
         }
+
+        private void btnCollection_Click(object sender, EventArgs e)
+        {
+            if (!panelModule.Controls.Contains(ucCollections.collectionsInstance))
+            {
+                panelModule.Controls.Add(ucCollections.collectionsInstance);
+                ucCollections.collectionsInstance.Dock = DockStyle.Fill;
+                ucCollections.collectionsInstance.BringToFront();
+            }
+            else
+            {
+                ucCollections.collectionsInstance.BringToFront();
+            }
+        }
     }
 }

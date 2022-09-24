@@ -29,9 +29,10 @@ namespace EBRMS.Treasurer
         /// </summary>
         private void InitializeComponent()
         {
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMainTreasurer));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPayment = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -43,6 +44,7 @@ namespace EBRMS.Treasurer
             this.lblUserRole = new Bunifu.UI.WinForms.BunifuLabel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelModule = new System.Windows.Forms.Panel();
+            this.btnCollection = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -53,6 +55,7 @@ namespace EBRMS.Treasurer
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnCollection);
             this.panel1.Controls.Add(this.btnPayment);
             this.panel1.Controls.Add(this.bunifuButton1);
             this.panel1.Controls.Add(this.label2);
@@ -84,11 +87,11 @@ namespace EBRMS.Treasurer
             this.btnPayment.ColorContrastOnClick = 45;
             this.btnPayment.ColorContrastOnHover = 45;
             this.btnPayment.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnPayment.CustomizableEdges = borderEdges1;
+            borderEdges2.BottomLeft = true;
+            borderEdges2.BottomRight = true;
+            borderEdges2.TopLeft = true;
+            borderEdges2.TopRight = true;
+            this.btnPayment.CustomizableEdges = borderEdges2;
             this.btnPayment.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btnPayment.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnPayment.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -175,11 +178,11 @@ namespace EBRMS.Treasurer
             this.bunifuButton1.ColorContrastOnClick = 45;
             this.bunifuButton1.ColorContrastOnHover = 45;
             this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.bunifuButton1.CustomizableEdges = borderEdges2;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.bunifuButton1.CustomizableEdges = borderEdges3;
             this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -203,7 +206,7 @@ namespace EBRMS.Treasurer
             this.bunifuButton1.IdleIconLeftImage = null;
             this.bunifuButton1.IdleIconRightImage = null;
             this.bunifuButton1.IndicateFocus = false;
-            this.bunifuButton1.Location = new System.Drawing.Point(63, 700);
+            this.bunifuButton1.Location = new System.Drawing.Point(63, 774);
             this.bunifuButton1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuButton1.Name = "bunifuButton1";
             this.bunifuButton1.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
@@ -348,6 +351,97 @@ namespace EBRMS.Treasurer
             this.panelModule.Size = new System.Drawing.Size(1298, 904);
             this.panelModule.TabIndex = 14;
             // 
+            // btnCollection
+            // 
+            this.btnCollection.AllowAnimations = true;
+            this.btnCollection.AllowMouseEffects = true;
+            this.btnCollection.AllowToggling = false;
+            this.btnCollection.AnimationSpeed = 200;
+            this.btnCollection.AutoGenerateColors = false;
+            this.btnCollection.AutoRoundBorders = false;
+            this.btnCollection.AutoSizeLeftIcon = true;
+            this.btnCollection.AutoSizeRightIcon = true;
+            this.btnCollection.BackColor = System.Drawing.Color.Transparent;
+            this.btnCollection.BackColor1 = System.Drawing.Color.DodgerBlue;
+            this.btnCollection.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCollection.BackgroundImage")));
+            this.btnCollection.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCollection.ButtonText = "Collection";
+            this.btnCollection.ButtonTextMarginLeft = 0;
+            this.btnCollection.ColorContrastOnClick = 45;
+            this.btnCollection.ColorContrastOnHover = 45;
+            this.btnCollection.Cursor = System.Windows.Forms.Cursors.Default;
+            borderEdges1.BottomLeft = true;
+            borderEdges1.BottomRight = true;
+            borderEdges1.TopLeft = true;
+            borderEdges1.TopRight = true;
+            this.btnCollection.CustomizableEdges = borderEdges1;
+            this.btnCollection.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnCollection.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnCollection.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnCollection.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnCollection.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
+            this.btnCollection.Font = new System.Drawing.Font("Arial Rounded MT Bold", 14.25F);
+            this.btnCollection.ForeColor = System.Drawing.Color.White;
+            this.btnCollection.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCollection.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnCollection.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
+            this.btnCollection.IconMarginLeft = 11;
+            this.btnCollection.IconPadding = 10;
+            this.btnCollection.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnCollection.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnCollection.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
+            this.btnCollection.IconSize = 25;
+            this.btnCollection.IdleBorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnCollection.IdleBorderRadius = 20;
+            this.btnCollection.IdleBorderThickness = 1;
+            this.btnCollection.IdleFillColor = System.Drawing.Color.DodgerBlue;
+            this.btnCollection.IdleIconLeftImage = null;
+            this.btnCollection.IdleIconRightImage = null;
+            this.btnCollection.IndicateFocus = false;
+            this.btnCollection.Location = new System.Drawing.Point(63, 691);
+            this.btnCollection.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCollection.Name = "btnCollection";
+            this.btnCollection.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
+            this.btnCollection.OnDisabledState.BorderRadius = 20;
+            this.btnCollection.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCollection.OnDisabledState.BorderThickness = 1;
+            this.btnCollection.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.btnCollection.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
+            this.btnCollection.OnDisabledState.IconLeftImage = null;
+            this.btnCollection.OnDisabledState.IconRightImage = null;
+            this.btnCollection.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnCollection.onHoverState.BorderRadius = 20;
+            this.btnCollection.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCollection.onHoverState.BorderThickness = 1;
+            this.btnCollection.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.btnCollection.onHoverState.ForeColor = System.Drawing.Color.White;
+            this.btnCollection.onHoverState.IconLeftImage = null;
+            this.btnCollection.onHoverState.IconRightImage = null;
+            this.btnCollection.OnIdleState.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.btnCollection.OnIdleState.BorderRadius = 20;
+            this.btnCollection.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCollection.OnIdleState.BorderThickness = 1;
+            this.btnCollection.OnIdleState.FillColor = System.Drawing.Color.DodgerBlue;
+            this.btnCollection.OnIdleState.ForeColor = System.Drawing.Color.White;
+            this.btnCollection.OnIdleState.IconLeftImage = null;
+            this.btnCollection.OnIdleState.IconRightImage = null;
+            this.btnCollection.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnCollection.OnPressedState.BorderRadius = 20;
+            this.btnCollection.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
+            this.btnCollection.OnPressedState.BorderThickness = 1;
+            this.btnCollection.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
+            this.btnCollection.OnPressedState.ForeColor = System.Drawing.Color.White;
+            this.btnCollection.OnPressedState.IconLeftImage = null;
+            this.btnCollection.OnPressedState.IconRightImage = null;
+            this.btnCollection.Size = new System.Drawing.Size(300, 75);
+            this.btnCollection.TabIndex = 18;
+            this.btnCollection.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCollection.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnCollection.TextMarginLeft = 0;
+            this.btnCollection.TextPadding = new System.Windows.Forms.Padding(0);
+            this.btnCollection.UseDefaultRadiusAndThickness = true;
+            this.btnCollection.Click += new System.EventHandler(this.btnCollection_Click);
+            // 
             // frmMainTreasurer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -382,9 +476,10 @@ namespace EBRMS.Treasurer
         private System.Windows.Forms.Panel panel2;
         private Bunifu.UI.WinForms.BunifuLabel lblUserRole;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Panel panelModule;
         private System.Windows.Forms.Label label2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnPayment;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        private System.Windows.Forms.Panel panelModule;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnCollection;
     }
 }

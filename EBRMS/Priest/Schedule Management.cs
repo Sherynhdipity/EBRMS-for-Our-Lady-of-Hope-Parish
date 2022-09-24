@@ -76,7 +76,7 @@ namespace EBRMS.Priest
         
 
 
-        public void DisplaySchedule()
+        public void DisplaySchedulebyUser()
         {
             try
             {
@@ -86,6 +86,31 @@ namespace EBRMS.Priest
 
                 cmd = new SqlCommand(QuerySelect, con);
                 cmd.Parameters.AddWithValue("@uID", userID);
+                adapter = new SqlDataAdapter(cmd);
+                dt = new DataTable();
+                adapter.Fill(dt);
+                dgvAvailSchedule.DataSource = dt;
+                dgvAvailSchedule.Refresh();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.StackTrace);
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        public void DisplaySchedule()
+        {
+            try
+            {
+
+                QuerySelect = "SELECT * FROM vwAvailableSched";
+
+                cmd = new SqlCommand(QuerySelect, con);
                 adapter = new SqlDataAdapter(cmd);
                 dt = new DataTable();
                 adapter.Fill(dt);
@@ -129,6 +154,18 @@ namespace EBRMS.Priest
         private void timer1_Tick(object sender, EventArgs e)
         {
             DisplaySchedule();
+        }
+
+        private void cmbScheduleFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbScheduleFilter.SelectedIndex == 0)
+            {
+                DisplaySchedule();
+            }
+            else if (cmbScheduleFilter.SelectedIndex == 1)
+            {
+                DisplaySchedulebyUser();
+            }
         }
     }
 }

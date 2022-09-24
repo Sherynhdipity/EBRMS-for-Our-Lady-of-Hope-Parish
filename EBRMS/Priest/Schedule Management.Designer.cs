@@ -39,6 +39,7 @@ namespace EBRMS.Priest
             this.label2 = new System.Windows.Forms.Label();
             this.dgvAvailSchedule = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.cmbScheduleFilter = new Bunifu.UI.WinForms.BunifuDropdown();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAvailSchedule)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,10 +212,58 @@ namespace EBRMS.Priest
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // cmbScheduleFilter
+            // 
+            this.cmbScheduleFilter.BackColor = System.Drawing.Color.Transparent;
+            this.cmbScheduleFilter.BackgroundColor = System.Drawing.Color.White;
+            this.cmbScheduleFilter.BorderColor = System.Drawing.Color.Silver;
+            this.cmbScheduleFilter.BorderRadius = 1;
+            this.cmbScheduleFilter.Color = System.Drawing.Color.Silver;
+            this.cmbScheduleFilter.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.cmbScheduleFilter.DisabledBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cmbScheduleFilter.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.cmbScheduleFilter.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.cmbScheduleFilter.DisabledForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.cmbScheduleFilter.DisabledIndicatorColor = System.Drawing.Color.DarkGray;
+            this.cmbScheduleFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbScheduleFilter.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thin;
+            this.cmbScheduleFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbScheduleFilter.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cmbScheduleFilter.FillDropDown = true;
+            this.cmbScheduleFilter.FillIndicator = false;
+            this.cmbScheduleFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbScheduleFilter.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbScheduleFilter.ForeColor = System.Drawing.Color.Black;
+            this.cmbScheduleFilter.FormattingEnabled = true;
+            this.cmbScheduleFilter.Icon = null;
+            this.cmbScheduleFilter.IndicatorAlignment = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cmbScheduleFilter.IndicatorColor = System.Drawing.Color.Gray;
+            this.cmbScheduleFilter.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.cmbScheduleFilter.ItemBackColor = System.Drawing.Color.White;
+            this.cmbScheduleFilter.ItemBorderColor = System.Drawing.Color.White;
+            this.cmbScheduleFilter.ItemForeColor = System.Drawing.Color.Black;
+            this.cmbScheduleFilter.ItemHeight = 26;
+            this.cmbScheduleFilter.ItemHighLightColor = System.Drawing.Color.DodgerBlue;
+            this.cmbScheduleFilter.ItemHighLightForeColor = System.Drawing.Color.White;
+            this.cmbScheduleFilter.Items.AddRange(new object[] {
+            "VIEW ALL SCHEDULE",
+            "VIEW USER SCHEDULE"});
+            this.cmbScheduleFilter.ItemTopMargin = 3;
+            this.cmbScheduleFilter.Location = new System.Drawing.Point(929, 129);
+            this.cmbScheduleFilter.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbScheduleFilter.Name = "cmbScheduleFilter";
+            this.cmbScheduleFilter.Size = new System.Drawing.Size(313, 32);
+            this.cmbScheduleFilter.TabIndex = 19;
+            this.cmbScheduleFilter.Text = null;
+            this.cmbScheduleFilter.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.cmbScheduleFilter.TextLeftMargin = 5;
+            this.cmbScheduleFilter.SelectedIndexChanged += new System.EventHandler(this.cmbScheduleFilter_SelectedIndexChanged);
+            // 
             // ucScheduleManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.cmbScheduleFilter);
             this.Controls.Add(this.dgvAvailSchedule);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnAddDateTime);
@@ -233,5 +282,6 @@ namespace EBRMS.Priest
         private System.Windows.Forms.Label label2;
         private Bunifu.UI.WinForms.BunifuDataGridView dgvAvailSchedule;
         private System.Windows.Forms.Timer timer1;
+        private Bunifu.UI.WinForms.BunifuDropdown cmbScheduleFilter;
     }
 }

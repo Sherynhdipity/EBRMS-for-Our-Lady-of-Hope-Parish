@@ -85,7 +85,8 @@ namespace EBRMS
                         {
                             case "Priest":
                                 {
-                                    MessageBox.Show("Welcome user " + GetUserName + "\n" + GetUserRole);
+                                   //MessageBox.Show("Welcome user " + GetUserName + "\n" + GetUserRole);
+                                    MessageBox.Show("Welcome user " + GetUserRole);
                                     frmMainPriest frmPriest = new frmMainPriest();
                                     frmPriest.Show();
                                     this.Hide();
@@ -93,7 +94,8 @@ namespace EBRMS
                                 }
                             case "Secretary":
                                 {
-                                    MessageBox.Show("Welcome user " + GetUserName + "\n" + GetUserRole);
+                                    //MessageBox.Show("Welcome user " + GetUserName + "\n" + GetUserRole);
+                                    MessageBox.Show("Welcome user " + GetUserRole);
                                     frmMainSecretary frmSecretary = new frmMainSecretary();
                                     frmSecretary.Show();
                                     this.Hide();
@@ -101,7 +103,8 @@ namespace EBRMS
                                 }
                             case "Treasurer":
                                 {
-                                    MessageBox.Show("Welcome user " + GetUserName + "\n" + GetUserRole);
+                                    //MessageBox.Show("Welcome user " + GetUserName + "\n" + GetUserRole);
+                                     MessageBox.Show("Welcome user " + GetUserRole);
                                     frmMainTreasurer frmTreasurer = new frmMainTreasurer();
                                     frmTreasurer.Show();
                                     this.Hide();
@@ -145,6 +148,17 @@ namespace EBRMS
         private void pbClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lnklblForgot_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmForgotPw forgotPw = new frmForgotPw();
+            forgotPw.Show();
         }
     }
 
