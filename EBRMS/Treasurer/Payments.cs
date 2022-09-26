@@ -338,7 +338,7 @@ namespace EBRMS.Treasurer
         {
             con.Close();
 
-                        if (String.IsNullOrEmpty(txtFirstName.Text))
+            if (String.IsNullOrEmpty(txtFirstName.Text))
             {
                 MessageBox.Show("Enter First Name!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtFirstName.Focus();
@@ -357,53 +357,18 @@ namespace EBRMS.Treasurer
             {
                 MessageBox.Show("Whitespace is not allowed!");
                 txtLastName.Clear();
-            }
-            else if (String.IsNullOrEmpty(txtUsername.Text))
-            {
-                MessageBox.Show("Enter Username!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtUsername.Focus();
-            }
-            else if (String.IsNullOrWhiteSpace(txtUsername.Text))
-            {
-                MessageBox.Show("Whitespace is not allowed!");
-                txtUsername.Clear();
-            }
-            else if (String.IsNullOrEmpty(txtPassword.Text))
-            {
-                MessageBox.Show("Enter Password!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtPassword.Focus();
-            }
-            else if (String.IsNullOrWhiteSpace(txtPassword.Text))
-            {
-                MessageBox.Show("Whitespace is not allowed!");
-                txtPassword.Clear();
-            }
-            else if (String.IsNullOrEmpty(txtConfirmPassword.Text))
-            {
-                MessageBox.Show("Enter Confirm Password!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtConfirmPassword.Focus();
-            }
-            else if (String.IsNullOrWhiteSpace(txtConfirmPassword.Text))
-            {
-                MessageBox.Show("Whitespace is not allowed!");
-                txtConfirmPassword.Clear();
-            }
-            else if (!Regex.IsMatch(txtPassword.Text, @"^(?=.*[a-z]).{8,15}$"))
-            {
-                MessageBox.Show("Password is minimum of 8 characters");
-                txtPassword.Clear();
-            }
-            else if (!Regex.IsMatch(txtPassword.Text, @"^(?=.*[A-Z])"))
-            {
-                MessageBox.Show("Password must have atleast 1 Uppercase letter");
-            }
-            else if (!Regex.IsMatch(txtPassword.Text, @"^(?=.*[@$!%*#?&_])"))
-            {
-                MessageBox.Show("Password must have atleast 1 special characters");
-            }
+            }                               
             else if (!Regex.IsMatch(txtFirstName.Text, @"^([a-zA-Z-.]+?)([-\s'][a-zA-Z]+)*?$"))
             {
                 MessageBox.Show("First Name must be in letters only");
+            }
+            else if (!Regex.IsMatch(txtLastName.Text, @"^([a-zA-Z-.]+?)([-\s'][a-zA-Z]+)*?$"))
+            {
+                MessageBox.Show("Last Name must be in letters only");
+            }
+            else if (!Regex.IsMatch(txtMiddleName.Text, @"^([a-zA-Z-.]+?)([-\s'][a-zA-Z]+)*?$"))
+            {
+                MessageBox.Show("Middle Name must be in letters only");
             }
             else if (txtFirstName.Text != "" && txtLastName.Text != "" && txtContactNo.Text != "")
             {
@@ -452,6 +417,8 @@ namespace EBRMS.Treasurer
                 MessageBox.Show("Please Provide Details!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+
 
 
         /* ------------------------ PAYMENT SUBMODULE------------------------------------*/

@@ -71,7 +71,8 @@ namespace EBRMS.Priest
             this.btnUpdateUser = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuButton2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlUserInfo = new Bunifu.UI.WinForms.BunifuPanel();
-            this.txtConfirmPass = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtConfirmPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.lbluID = new System.Windows.Forms.Label();
             this.btnUpdate = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnSave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -86,7 +87,6 @@ namespace EBRMS.Priest
             this.txtLastName = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.pnlUserInfo.SuspendLayout();
             this.SuspendLayout();
@@ -143,15 +143,14 @@ namespace EBRMS.Priest
             this.dgvUsers.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvUsers.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvUsers.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvUsers.Location = new System.Drawing.Point(39, 295);
-            this.dgvUsers.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvUsers.Location = new System.Drawing.Point(29, 240);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
             this.dgvUsers.RowHeadersVisible = false;
             this.dgvUsers.RowHeadersWidth = 51;
             this.dgvUsers.RowTemplate.Height = 40;
             this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsers.Size = new System.Drawing.Size(729, 518);
+            this.dgvUsers.Size = new System.Drawing.Size(547, 421);
             this.dgvUsers.TabIndex = 13;
             this.dgvUsers.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgvUsers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellContentClick);
@@ -183,8 +182,7 @@ namespace EBRMS.Priest
             this.txtViewUsers.IconRight = null;
             this.txtViewUsers.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtViewUsers.Lines = new string[0];
-            this.txtViewUsers.Location = new System.Drawing.Point(39, 219);
-            this.txtViewUsers.Margin = new System.Windows.Forms.Padding(4);
+            this.txtViewUsers.Location = new System.Drawing.Point(29, 178);
             this.txtViewUsers.MaxLength = 32767;
             this.txtViewUsers.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtViewUsers.Modified = false;
@@ -210,7 +208,7 @@ namespace EBRMS.Priest
             stateProperties4.ForeColor = System.Drawing.Color.Empty;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtViewUsers.OnIdleState = stateProperties4;
-            this.txtViewUsers.Padding = new System.Windows.Forms.Padding(4);
+            this.txtViewUsers.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txtViewUsers.PasswordChar = '\0';
             this.txtViewUsers.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtViewUsers.PlaceholderText = "Search Users";
@@ -220,7 +218,7 @@ namespace EBRMS.Priest
             this.txtViewUsers.SelectionLength = 0;
             this.txtViewUsers.SelectionStart = 0;
             this.txtViewUsers.ShortcutsEnabled = true;
-            this.txtViewUsers.Size = new System.Drawing.Size(729, 46);
+            this.txtViewUsers.Size = new System.Drawing.Size(547, 37);
             this.txtViewUsers.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtViewUsers.TabIndex = 11;
             this.txtViewUsers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -279,8 +277,7 @@ namespace EBRMS.Priest
             this.btnAddUser.IdleIconLeftImage = null;
             this.btnAddUser.IdleIconRightImage = null;
             this.btnAddUser.IndicateFocus = false;
-            this.btnAddUser.Location = new System.Drawing.Point(1111, 219);
-            this.btnAddUser.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAddUser.Location = new System.Drawing.Point(833, 178);
             this.btnAddUser.Name = "btnAddUser";
             this.btnAddUser.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnAddUser.OnDisabledState.BorderRadius = 10;
@@ -314,7 +311,7 @@ namespace EBRMS.Priest
             this.btnAddUser.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnAddUser.OnPressedState.IconLeftImage = null;
             this.btnAddUser.OnPressedState.IconRightImage = null;
-            this.btnAddUser.Size = new System.Drawing.Size(152, 48);
+            this.btnAddUser.Size = new System.Drawing.Size(114, 39);
             this.btnAddUser.TabIndex = 10;
             this.btnAddUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddUser.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -331,9 +328,10 @@ namespace EBRMS.Priest
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Impact", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(47, 76);
+            this.label2.Location = new System.Drawing.Point(35, 62);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(386, 60);
+            this.label2.Size = new System.Drawing.Size(309, 46);
             this.label2.TabIndex = 14;
             this.label2.Text = "USER MANAGEMENT";
             // 
@@ -384,8 +382,7 @@ namespace EBRMS.Priest
             this.btnUpdateUser.IdleIconLeftImage = null;
             this.btnUpdateUser.IdleIconRightImage = null;
             this.btnUpdateUser.IndicateFocus = false;
-            this.btnUpdateUser.Location = new System.Drawing.Point(955, 219);
-            this.btnUpdateUser.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdateUser.Location = new System.Drawing.Point(716, 178);
             this.btnUpdateUser.Name = "btnUpdateUser";
             this.btnUpdateUser.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnUpdateUser.OnDisabledState.BorderRadius = 10;
@@ -419,7 +416,7 @@ namespace EBRMS.Priest
             this.btnUpdateUser.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnUpdateUser.OnPressedState.IconLeftImage = null;
             this.btnUpdateUser.OnPressedState.IconRightImage = null;
-            this.btnUpdateUser.Size = new System.Drawing.Size(148, 48);
+            this.btnUpdateUser.Size = new System.Drawing.Size(111, 39);
             this.btnUpdateUser.TabIndex = 18;
             this.btnUpdateUser.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnUpdateUser.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -475,8 +472,7 @@ namespace EBRMS.Priest
             this.bunifuButton2.IdleIconLeftImage = null;
             this.bunifuButton2.IdleIconRightImage = null;
             this.bunifuButton2.IndicateFocus = false;
-            this.bunifuButton2.Location = new System.Drawing.Point(790, 219);
-            this.bunifuButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.bunifuButton2.Location = new System.Drawing.Point(592, 178);
             this.bunifuButton2.Name = "bunifuButton2";
             this.bunifuButton2.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.bunifuButton2.OnDisabledState.BorderRadius = 10;
@@ -510,7 +506,7 @@ namespace EBRMS.Priest
             this.bunifuButton2.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.bunifuButton2.OnPressedState.IconLeftImage = null;
             this.bunifuButton2.OnPressedState.IconRightImage = null;
-            this.bunifuButton2.Size = new System.Drawing.Size(157, 48);
+            this.bunifuButton2.Size = new System.Drawing.Size(118, 39);
             this.bunifuButton2.TabIndex = 19;
             this.bunifuButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuButton2.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -527,7 +523,7 @@ namespace EBRMS.Priest
             this.pnlUserInfo.BorderRadius = 20;
             this.pnlUserInfo.BorderThickness = 1;
             this.pnlUserInfo.Controls.Add(this.label1);
-            this.pnlUserInfo.Controls.Add(this.txtConfirmPass);
+            this.pnlUserInfo.Controls.Add(this.txtConfirmPassword);
             this.pnlUserInfo.Controls.Add(this.lbluID);
             this.pnlUserInfo.Controls.Add(this.btnUpdate);
             this.pnlUserInfo.Controls.Add(this.btnSave);
@@ -542,87 +538,101 @@ namespace EBRMS.Priest
             this.pnlUserInfo.Controls.Add(this.txtLastName);
             this.pnlUserInfo.Controls.Add(this.label4);
             this.pnlUserInfo.Controls.Add(this.label3);
-            this.pnlUserInfo.Location = new System.Drawing.Point(790, 295);
+            this.pnlUserInfo.Location = new System.Drawing.Point(592, 240);
+            this.pnlUserInfo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlUserInfo.Name = "pnlUserInfo";
             this.pnlUserInfo.ShowBorders = true;
-            this.pnlUserInfo.Size = new System.Drawing.Size(473, 518);
+            this.pnlUserInfo.Size = new System.Drawing.Size(355, 421);
             this.pnlUserInfo.TabIndex = 20;
             this.pnlUserInfo.Visible = false;
             // 
-            // txtConfirmPass
+            // label1
             // 
-            this.txtConfirmPass.AcceptsReturn = false;
-            this.txtConfirmPass.AcceptsTab = false;
-            this.txtConfirmPass.AnimationSpeed = 200;
-            this.txtConfirmPass.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtConfirmPass.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtConfirmPass.BackColor = System.Drawing.Color.Transparent;
-            this.txtConfirmPass.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtConfirmPass.BackgroundImage")));
-            this.txtConfirmPass.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txtConfirmPass.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txtConfirmPass.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txtConfirmPass.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtConfirmPass.BorderRadius = 1;
-            this.txtConfirmPass.BorderThickness = 1;
-            this.txtConfirmPass.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtConfirmPass.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtConfirmPass.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
-            this.txtConfirmPass.DefaultText = "";
-            this.txtConfirmPass.FillColor = System.Drawing.Color.White;
-            this.txtConfirmPass.HideSelection = true;
-            this.txtConfirmPass.IconLeft = null;
-            this.txtConfirmPass.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtConfirmPass.IconPadding = 10;
-            this.txtConfirmPass.IconRight = null;
-            this.txtConfirmPass.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtConfirmPass.Lines = new string[0];
-            this.txtConfirmPass.Location = new System.Drawing.Point(134, 378);
-            this.txtConfirmPass.Margin = new System.Windows.Forms.Padding(4);
-            this.txtConfirmPass.MaxLength = 32767;
-            this.txtConfirmPass.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txtConfirmPass.Modified = false;
-            this.txtConfirmPass.Multiline = false;
-            this.txtConfirmPass.Name = "txtConfirmPass";
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(28, 307);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(67, 38);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Confirm \r\nPassword";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtConfirmPassword
+            // 
+            this.txtConfirmPassword.AcceptsReturn = false;
+            this.txtConfirmPassword.AcceptsTab = false;
+            this.txtConfirmPassword.AnimationSpeed = 200;
+            this.txtConfirmPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtConfirmPassword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtConfirmPassword.BackColor = System.Drawing.Color.Transparent;
+            this.txtConfirmPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtConfirmPassword.BackgroundImage")));
+            this.txtConfirmPassword.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txtConfirmPassword.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtConfirmPassword.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtConfirmPassword.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtConfirmPassword.BorderRadius = 1;
+            this.txtConfirmPassword.BorderThickness = 1;
+            this.txtConfirmPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtConfirmPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmPassword.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtConfirmPassword.DefaultText = "";
+            this.txtConfirmPassword.FillColor = System.Drawing.Color.White;
+            this.txtConfirmPassword.HideSelection = true;
+            this.txtConfirmPassword.IconLeft = null;
+            this.txtConfirmPassword.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmPassword.IconPadding = 10;
+            this.txtConfirmPassword.IconRight = null;
+            this.txtConfirmPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConfirmPassword.Lines = new string[0];
+            this.txtConfirmPassword.Location = new System.Drawing.Point(100, 307);
+            this.txtConfirmPassword.MaxLength = 32767;
+            this.txtConfirmPassword.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtConfirmPassword.Modified = false;
+            this.txtConfirmPassword.Multiline = false;
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
             stateProperties5.BorderColor = System.Drawing.Color.DodgerBlue;
             stateProperties5.FillColor = System.Drawing.Color.Empty;
             stateProperties5.ForeColor = System.Drawing.Color.Empty;
             stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtConfirmPass.OnActiveState = stateProperties5;
+            this.txtConfirmPassword.OnActiveState = stateProperties5;
             stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             stateProperties6.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtConfirmPass.OnDisabledState = stateProperties6;
+            this.txtConfirmPassword.OnDisabledState = stateProperties6;
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
             stateProperties7.FillColor = System.Drawing.Color.Empty;
             stateProperties7.ForeColor = System.Drawing.Color.Empty;
             stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtConfirmPass.OnHoverState = stateProperties7;
+            this.txtConfirmPassword.OnHoverState = stateProperties7;
             stateProperties8.BorderColor = System.Drawing.Color.Silver;
             stateProperties8.FillColor = System.Drawing.Color.White;
             stateProperties8.ForeColor = System.Drawing.Color.Empty;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtConfirmPass.OnIdleState = stateProperties8;
-            this.txtConfirmPass.Padding = new System.Windows.Forms.Padding(4);
-            this.txtConfirmPass.PasswordChar = '\0';
-            this.txtConfirmPass.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.txtConfirmPass.PlaceholderText = "Enter Password";
-            this.txtConfirmPass.ReadOnly = false;
-            this.txtConfirmPass.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtConfirmPass.SelectedText = "";
-            this.txtConfirmPass.SelectionLength = 0;
-            this.txtConfirmPass.SelectionStart = 0;
-            this.txtConfirmPass.ShortcutsEnabled = true;
-            this.txtConfirmPass.Size = new System.Drawing.Size(308, 44);
-            this.txtConfirmPass.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtConfirmPass.TabIndex = 48;
-            this.txtConfirmPass.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtConfirmPass.TextMarginBottom = 0;
-            this.txtConfirmPass.TextMarginLeft = 3;
-            this.txtConfirmPass.TextMarginTop = 0;
-            this.txtConfirmPass.TextPlaceholder = "Enter Password";
-            this.txtConfirmPass.UseSystemPasswordChar = false;
-            this.txtConfirmPass.WordWrap = true;
+            this.txtConfirmPassword.OnIdleState = stateProperties8;
+            this.txtConfirmPassword.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txtConfirmPassword.PasswordChar = '\0';
+            this.txtConfirmPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtConfirmPassword.PlaceholderText = "Enter Password";
+            this.txtConfirmPassword.ReadOnly = false;
+            this.txtConfirmPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtConfirmPassword.SelectedText = "";
+            this.txtConfirmPassword.SelectionLength = 0;
+            this.txtConfirmPassword.SelectionStart = 0;
+            this.txtConfirmPassword.ShortcutsEnabled = true;
+            this.txtConfirmPassword.Size = new System.Drawing.Size(231, 36);
+            this.txtConfirmPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtConfirmPassword.TabIndex = 48;
+            this.txtConfirmPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtConfirmPassword.TextMarginBottom = 0;
+            this.txtConfirmPassword.TextMarginLeft = 3;
+            this.txtConfirmPassword.TextMarginTop = 0;
+            this.txtConfirmPassword.TextPlaceholder = "Enter Password";
+            this.txtConfirmPassword.UseSystemPasswordChar = false;
+            this.txtConfirmPassword.WordWrap = true;
             // 
             // lbluID
             // 
@@ -630,9 +640,10 @@ namespace EBRMS.Priest
             this.lbluID.BackColor = System.Drawing.Color.Transparent;
             this.lbluID.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbluID.ForeColor = System.Drawing.Color.White;
-            this.lbluID.Location = new System.Drawing.Point(397, 37);
+            this.lbluID.Location = new System.Drawing.Point(298, 30);
+            this.lbluID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbluID.Name = "lbluID";
-            this.lbluID.Size = new System.Drawing.Size(38, 23);
+            this.lbluID.Size = new System.Drawing.Size(31, 19);
             this.lbluID.TabIndex = 47;
             this.lbluID.Text = "uID";
             this.lbluID.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -685,8 +696,7 @@ namespace EBRMS.Priest
             this.btnUpdate.IdleIconLeftImage = null;
             this.btnUpdate.IdleIconRightImage = null;
             this.btnUpdate.IndicateFocus = false;
-            this.btnUpdate.Location = new System.Drawing.Point(192, 467);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Location = new System.Drawing.Point(144, 379);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnUpdate.OnDisabledState.BorderRadius = 20;
@@ -720,7 +730,7 @@ namespace EBRMS.Priest
             this.btnUpdate.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.OnPressedState.IconLeftImage = null;
             this.btnUpdate.OnPressedState.IconRightImage = null;
-            this.btnUpdate.Size = new System.Drawing.Size(111, 37);
+            this.btnUpdate.Size = new System.Drawing.Size(83, 30);
             this.btnUpdate.TabIndex = 46;
             this.btnUpdate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnUpdate.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -776,8 +786,7 @@ namespace EBRMS.Priest
             this.btnSave.IdleIconLeftImage = null;
             this.btnSave.IdleIconRightImage = null;
             this.btnSave.IndicateFocus = false;
-            this.btnSave.Location = new System.Drawing.Point(192, 467);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSave.Location = new System.Drawing.Point(144, 379);
             this.btnSave.Name = "btnSave";
             this.btnSave.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btnSave.OnDisabledState.BorderRadius = 20;
@@ -811,7 +820,7 @@ namespace EBRMS.Priest
             this.btnSave.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btnSave.OnPressedState.IconLeftImage = null;
             this.btnSave.OnPressedState.IconRightImage = null;
-            this.btnSave.Size = new System.Drawing.Size(111, 37);
+            this.btnSave.Size = new System.Drawing.Size(83, 30);
             this.btnSave.TabIndex = 45;
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSave.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -826,9 +835,10 @@ namespace EBRMS.Priest
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(167, 37);
+            this.label12.Location = new System.Drawing.Point(125, 30);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(146, 23);
+            this.label12.Size = new System.Drawing.Size(122, 19);
             this.label12.TabIndex = 44;
             this.label12.Text = "User Information";
             this.label12.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -839,9 +849,10 @@ namespace EBRMS.Priest
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(35, 338);
+            this.label13.Location = new System.Drawing.Point(26, 275);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(80, 23);
+            this.label13.Size = new System.Drawing.Size(67, 19);
             this.label13.TabIndex = 39;
             this.label13.Text = "Password";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -873,8 +884,7 @@ namespace EBRMS.Priest
             this.txtPassword.IconRight = null;
             this.txtPassword.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPassword.Lines = new string[0];
-            this.txtPassword.Location = new System.Drawing.Point(134, 326);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Location = new System.Drawing.Point(100, 265);
             this.txtPassword.MaxLength = 32767;
             this.txtPassword.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtPassword.Modified = false;
@@ -900,7 +910,7 @@ namespace EBRMS.Priest
             stateProperties12.ForeColor = System.Drawing.Color.Empty;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtPassword.OnIdleState = stateProperties12;
-            this.txtPassword.Padding = new System.Windows.Forms.Padding(4);
+            this.txtPassword.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txtPassword.PasswordChar = '\0';
             this.txtPassword.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtPassword.PlaceholderText = "Enter Password";
@@ -910,7 +920,7 @@ namespace EBRMS.Priest
             this.txtPassword.SelectionLength = 0;
             this.txtPassword.SelectionStart = 0;
             this.txtPassword.ShortcutsEnabled = true;
-            this.txtPassword.Size = new System.Drawing.Size(308, 44);
+            this.txtPassword.Size = new System.Drawing.Size(231, 36);
             this.txtPassword.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtPassword.TabIndex = 38;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -927,9 +937,10 @@ namespace EBRMS.Priest
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(66, 259);
+            this.label6.Location = new System.Drawing.Point(50, 210);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 23);
+            this.label6.Size = new System.Drawing.Size(35, 19);
             this.label6.TabIndex = 32;
             this.label6.Text = "Role";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -972,10 +983,9 @@ namespace EBRMS.Priest
             "Secretary",
             "Treasurer"});
             this.cmbRole.ItemTopMargin = 3;
-            this.cmbRole.Location = new System.Drawing.Point(134, 254);
-            this.cmbRole.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbRole.Location = new System.Drawing.Point(100, 206);
             this.cmbRole.Name = "cmbRole";
-            this.cmbRole.Size = new System.Drawing.Size(308, 32);
+            this.cmbRole.Size = new System.Drawing.Size(232, 32);
             this.cmbRole.TabIndex = 29;
             this.cmbRole.Text = null;
             this.cmbRole.TextAlignment = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
@@ -987,9 +997,10 @@ namespace EBRMS.Priest
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(28, 210);
+            this.label5.Location = new System.Drawing.Point(21, 171);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 23);
+            this.label5.Size = new System.Drawing.Size(71, 19);
             this.label5.TabIndex = 28;
             this.label5.Text = "Username";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1021,8 +1032,7 @@ namespace EBRMS.Priest
             this.txtUsername.IconRight = null;
             this.txtUsername.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.Lines = new string[0];
-            this.txtUsername.Location = new System.Drawing.Point(134, 195);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Location = new System.Drawing.Point(100, 158);
             this.txtUsername.MaxLength = 32767;
             this.txtUsername.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtUsername.Modified = false;
@@ -1048,7 +1058,7 @@ namespace EBRMS.Priest
             stateProperties16.ForeColor = System.Drawing.Color.Empty;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtUsername.OnIdleState = stateProperties16;
-            this.txtUsername.Padding = new System.Windows.Forms.Padding(4);
+            this.txtUsername.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txtUsername.PasswordChar = '\0';
             this.txtUsername.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtUsername.PlaceholderText = "Enter Middlename";
@@ -1058,7 +1068,7 @@ namespace EBRMS.Priest
             this.txtUsername.SelectionLength = 0;
             this.txtUsername.SelectionStart = 0;
             this.txtUsername.ShortcutsEnabled = true;
-            this.txtUsername.Size = new System.Drawing.Size(308, 44);
+            this.txtUsername.Size = new System.Drawing.Size(231, 36);
             this.txtUsername.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtUsername.TabIndex = 27;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1096,8 +1106,7 @@ namespace EBRMS.Priest
             this.txtFirstName.IconRight = null;
             this.txtFirstName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtFirstName.Lines = new string[0];
-            this.txtFirstName.Location = new System.Drawing.Point(134, 138);
-            this.txtFirstName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFirstName.Location = new System.Drawing.Point(100, 112);
             this.txtFirstName.MaxLength = 32767;
             this.txtFirstName.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtFirstName.Modified = false;
@@ -1123,7 +1132,7 @@ namespace EBRMS.Priest
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtFirstName.OnIdleState = stateProperties20;
-            this.txtFirstName.Padding = new System.Windows.Forms.Padding(4);
+            this.txtFirstName.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txtFirstName.PasswordChar = '\0';
             this.txtFirstName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtFirstName.PlaceholderText = "Enter Firstname";
@@ -1133,7 +1142,7 @@ namespace EBRMS.Priest
             this.txtFirstName.SelectionLength = 0;
             this.txtFirstName.SelectionStart = 0;
             this.txtFirstName.ShortcutsEnabled = true;
-            this.txtFirstName.Size = new System.Drawing.Size(308, 44);
+            this.txtFirstName.Size = new System.Drawing.Size(231, 36);
             this.txtFirstName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtFirstName.TabIndex = 26;
             this.txtFirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1171,8 +1180,7 @@ namespace EBRMS.Priest
             this.txtLastName.IconRight = null;
             this.txtLastName.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtLastName.Lines = new string[0];
-            this.txtLastName.Location = new System.Drawing.Point(134, 87);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLastName.Location = new System.Drawing.Point(100, 71);
             this.txtLastName.MaxLength = 32767;
             this.txtLastName.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtLastName.Modified = false;
@@ -1198,7 +1206,7 @@ namespace EBRMS.Priest
             stateProperties24.ForeColor = System.Drawing.Color.Empty;
             stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txtLastName.OnIdleState = stateProperties24;
-            this.txtLastName.Padding = new System.Windows.Forms.Padding(4);
+            this.txtLastName.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txtLastName.PasswordChar = '\0';
             this.txtLastName.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtLastName.PlaceholderText = "Enter Lastname";
@@ -1208,7 +1216,7 @@ namespace EBRMS.Priest
             this.txtLastName.SelectionLength = 0;
             this.txtLastName.SelectionStart = 0;
             this.txtLastName.ShortcutsEnabled = true;
-            this.txtLastName.Size = new System.Drawing.Size(308, 44);
+            this.txtLastName.Size = new System.Drawing.Size(231, 36);
             this.txtLastName.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
             this.txtLastName.TabIndex = 25;
             this.txtLastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -1225,9 +1233,10 @@ namespace EBRMS.Priest
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(25, 152);
+            this.label4.Location = new System.Drawing.Point(19, 124);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 23);
+            this.label4.Size = new System.Drawing.Size(75, 19);
             this.label4.TabIndex = 24;
             this.label4.Text = "First Name";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -1238,29 +1247,17 @@ namespace EBRMS.Priest
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(18, 99);
+            this.label3.Location = new System.Drawing.Point(14, 80);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 23);
+            this.label3.Size = new System.Drawing.Size(74, 19);
             this.label3.TabIndex = 23;
             this.label3.Text = "Last Name";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(37, 378);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 46);
-            this.label1.TabIndex = 49;
-            this.label1.Text = "Confirm \r\nPassword";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ucUserManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlUserInfo);
             this.Controls.Add(this.bunifuButton2);
@@ -1269,9 +1266,8 @@ namespace EBRMS.Priest
             this.Controls.Add(this.dgvUsers);
             this.Controls.Add(this.txtViewUsers);
             this.Controls.Add(this.btnAddUser);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ucUserManagement";
-            this.Size = new System.Drawing.Size(1301, 911);
+            this.Size = new System.Drawing.Size(976, 740);
             this.Load += new System.EventHandler(this.ucUserManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).EndInit();
             this.pnlUserInfo.ResumeLayout(false);
@@ -1304,7 +1300,7 @@ namespace EBRMS.Priest
         private Bunifu.UI.WinForms.BunifuTextBox txtLastName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private Bunifu.UI.WinForms.BunifuTextBox txtConfirmPass;
+        private Bunifu.UI.WinForms.BunifuTextBox txtConfirmPassword;
         private System.Windows.Forms.Label label1;
     }
 }

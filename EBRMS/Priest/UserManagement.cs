@@ -38,7 +38,7 @@ namespace EBRMS.Priest
             txtLastName.Clear();
             txtUsername.Clear();
             txtPassword.Clear();
-            txtConfirmPass.Clear();
+            txtConfirmPassword.Clear();
             cmbRole.SelectedIndex = 0;
         }
 
@@ -135,17 +135,17 @@ namespace EBRMS.Priest
             else if (String.IsNullOrWhiteSpace(txtFirstName.Text))
             {
                 MessageBox.Show("Whitespace is not allowed!");
-                txtFirstName.Clear();
+
             }
             else if (String.IsNullOrEmpty(txtLastName.Text))
             {
                 MessageBox.Show("Enter Last Name!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                txtLastName.Focus();
+
             }
             else if (String.IsNullOrWhiteSpace(txtLastName.Text))
             {
                 MessageBox.Show("Whitespace is not allowed!");
-                txtLastName.Clear();
+
             }
             else if (String.IsNullOrEmpty(txtUsername.Text))
             {
@@ -179,12 +179,12 @@ namespace EBRMS.Priest
             }
             else if (!Regex.IsMatch(txtPassword.Text, @"^(?=.*[a-z]).{8,15}$"))
             {
-                MessageBox.Show("Password is minimum of 8 characters");
-                txtPassword.Clear();
+                MessageBox.Show("Password must be 8 characters");
+
             }
             else if (!Regex.IsMatch(txtPassword.Text, @"^(?=.*[A-Z])"))
             {
-                MessageBox.Show("Password must have atleast 1 Uppercase letter");
+                MessageBox.Show("Password must be have atleast 1 Uppercase letter");
             }
             else if (!Regex.IsMatch(txtPassword.Text, @"^(?=.*[@$!%*#?&_])"))
             {
@@ -192,49 +192,70 @@ namespace EBRMS.Priest
             }
             else if (!Regex.IsMatch(txtFirstName.Text, @"^([a-zA-Z-.]+?)([-\s'][a-zA-Z]+)*?$"))
             {
-                MessageBox.Show("First Name must be in letters only");
+                MessageBox.Show("First Name must be a letter only");
             }
-            else if (txtFirstName.Text != "" && txtLastName.Text != "" && txtContactNo.Text != "")
+
+            else if (!Regex.IsMatch(txtLastName.Text, @"^([a-zA-Z-.]+?)([-\s'][a-zA-Z]+)*?$"))
             {
-                result = MessageBox.Show("Do you want to update this User?", "Update User", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                MessageBox.Show("Last name must be letter only");
+
+            }
+            else if (!Regex.IsMatch(txtUsername.Text, @"^[A-Za-z0-9_!@#$%^&*()+={}[]*$"))
+            {
+                MessageBox.Show("Invalid Username");
+            }
+
+            else if (txtFirstName.Text != "" && txtLastName.Text != "" && txtUsername.Text != "" && txtPassword.Text != "" && txtConfirmPassword.Text != "")
+            {
+                if (txtPassword.Text == txtConfirmPassword.Text)
                 {
-                    try
+                    result = MessageBox.Show("Do you want to update this User?", "Update User", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
                     {
-                        con.Close();
-                        con.Open();
+                        try
+                        {
+                            con.Close();
+                            con.Open();
 
-                        QueryUpdate = "UPDATE tblClient SET c_FN = @fName, c_MN = @mName, c_LN = @lName, c_ContactNo = @cNo, Province = @cProv, Municipality = @cMun, Barangay = @cBrgy WHERE clientID = (SELECT clientID FROM tblClient WHERE c_FN = @fName  AND c_MN = @mName AND c_LN = @lName)";
+                            QueryUpdate = "UPDATE tblUsers SET firstName = @fName, lastName = @lName, username = @userName, password = @password,userType = @userType WHERE userID = (SELECT userID FROM tblUsers WHERE firstName = @fName AND lastName = @lName AND username = @userName)";
 
-                        cmd = new SqlCommand(QueryUpdate, con);
+                            cmd = new SqlCommand(QueryUpdate, con);
 
-                        cmd.Parameters.AddWithValue("@fName", txtFirstName.Text);
-                        cmd.Parameters.AddWithValue("@mName", txtMiddleName.Text);
-                        cmd.Parameters.AddWithValue("@lName", txtLastName.Text);
-                        cmd.Parameters.AddWithValue("@cNo", txtContactNo.Text);
-                        cmd.Parameters.AddWithValue("@cProv", cmbProvince.Text);
-                        cmd.Parameters.AddWithValue("@cMun", cmbMunicipality.Text);
-                        cmd.Parameters.AddWithValue("@cBrgy", cmbBarangay.Text);
+                            cmd.Parameters.AddWithValue("@fName", txtFirstName.Text);
+                            cmd.Parameters.AddWithValue("@lName", txtLastName.Text);
+                            cmd.Parameters.AddWithValue("@userName", txtUsername.Text);
+                            cmd.Parameters.AddWithValue("@password", txtPassword.Text);
+                            cmd.Parameters.AddWithValue("@userType", cmbRole.SelectedItem.ToString());
+                            cmd.ExecuteNonQuery();
 
-                        cmd.ExecuteNonQuery();
+                            MessageBox.Show("User Updated Successfully!", "Update User", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            
 
-                        MessageBox.Show("Client Updated Successfully!", "Update Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                            con.Close();
+                        }
+                        finally
+                        {
+                            con.Close();
+                        }
+
+                        DisplayUser();
                         ClearControls();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                        con.Close();
-                    }
-                    finally
-                    {
-                        con.Close();
-                    }
+                        pnlUserInfo.Visible = false;
 
-                    DisplayClients();
-                    ClearControls();
-                    pnlClientInfo.Visible = false;
+                    }
                 }
+
+                else
+                {
+                    MessageBox.Show("Password Don't Match!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtConfirmPassword.Focus();
+                }
+
             }
             else
             {
