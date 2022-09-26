@@ -29,10 +29,10 @@ namespace EBRMS.Treasurer
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCollections));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucCollections));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
@@ -46,7 +46,6 @@ namespace EBRMS.Treasurer
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -68,6 +67,7 @@ namespace EBRMS.Treasurer
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.lblTransDate = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -77,23 +77,6 @@ namespace EBRMS.Treasurer
             ((System.ComponentModel.ISupportInitialize)(this.dgvDonations)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Impact", 36F);
-            this.bunifuLabel1.Location = new System.Drawing.Point(309, 55);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(311, 75);
-            this.bunifuLabel1.TabIndex = 5;
-            this.bunifuLabel1.Text = "COLLECTIONS";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // pictureBox1
             // 
@@ -110,10 +93,10 @@ namespace EBRMS.Treasurer
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.Payment);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(60, 170);
+            this.tabControl1.Location = new System.Drawing.Point(45, 173);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1297, 903);
+            this.tabControl1.Size = new System.Drawing.Size(1197, 681);
             this.tabControl1.TabIndex = 44;
             // 
             // tabPage1
@@ -123,7 +106,7 @@ namespace EBRMS.Treasurer
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1289, 865);
+            this.tabPage1.Size = new System.Drawing.Size(1189, 643);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Mass Collection";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -142,7 +125,7 @@ namespace EBRMS.Treasurer
             this.dgvMassCollection.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(115)))), ((int)(((byte)(204)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -169,7 +152,7 @@ namespace EBRMS.Treasurer
             this.dgvMassCollection.CurrentTheme.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
@@ -180,7 +163,7 @@ namespace EBRMS.Treasurer
             this.dgvMassCollection.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvMassCollection.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvMassCollection.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvMassCollection.Location = new System.Drawing.Point(586, 53);
+            this.dgvMassCollection.Location = new System.Drawing.Point(597, 53);
             this.dgvMassCollection.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMassCollection.Name = "dgvMassCollection";
             this.dgvMassCollection.ReadOnly = true;
@@ -188,7 +171,7 @@ namespace EBRMS.Treasurer
             this.dgvMassCollection.RowHeadersWidth = 51;
             this.dgvMassCollection.RowTemplate.Height = 40;
             this.dgvMassCollection.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMassCollection.Size = new System.Drawing.Size(658, 746);
+            this.dgvMassCollection.Size = new System.Drawing.Size(545, 539);
             this.dgvMassCollection.TabIndex = 14;
             this.dgvMassCollection.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -493,7 +476,7 @@ namespace EBRMS.Treasurer
             this.Payment.Location = new System.Drawing.Point(4, 34);
             this.Payment.Name = "Payment";
             this.Payment.Padding = new System.Windows.Forms.Padding(3);
-            this.Payment.Size = new System.Drawing.Size(1289, 865);
+            this.Payment.Size = new System.Drawing.Size(1189, 643);
             this.Payment.TabIndex = 1;
             this.Payment.Text = "Donation";
             this.Payment.UseVisualStyleBackColor = true;
@@ -550,7 +533,7 @@ namespace EBRMS.Treasurer
             this.dgvDonations.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgvDonations.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgvDonations.HeaderForeColor = System.Drawing.Color.White;
-            this.dgvDonations.Location = new System.Drawing.Point(582, 47);
+            this.dgvDonations.Location = new System.Drawing.Point(576, 47);
             this.dgvDonations.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDonations.Name = "dgvDonations";
             this.dgvDonations.ReadOnly = true;
@@ -558,7 +541,7 @@ namespace EBRMS.Treasurer
             this.dgvDonations.RowHeadersWidth = 51;
             this.dgvDonations.RowTemplate.Height = 40;
             this.dgvDonations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDonations.Size = new System.Drawing.Size(664, 772);
+            this.dgvDonations.Size = new System.Drawing.Size(564, 534);
             this.dgvDonations.TabIndex = 44;
             this.dgvDonations.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -811,15 +794,25 @@ namespace EBRMS.Treasurer
             this.lblTransDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTransDate.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Impact", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(261, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(343, 75);
+            this.label2.TabIndex = 45;
+            this.label2.Text = "COLLECTIONS";
+            // 
             // ucCollections
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.bunifuLabel1);
             this.Name = "ucCollections";
-            this.Size = new System.Drawing.Size(1482, 1130);
+            this.Size = new System.Drawing.Size(1298, 904);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -837,8 +830,6 @@ namespace EBRMS.Treasurer
         }
 
         #endregion
-
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -860,5 +851,6 @@ namespace EBRMS.Treasurer
         private System.Windows.Forms.Label label6;
         private Bunifu.UI.WinForms.BunifuDropdown cmbMassNo;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label2;
     }
 }

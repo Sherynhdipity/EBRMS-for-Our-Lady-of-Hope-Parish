@@ -199,5 +199,10 @@ namespace EBRMS.Priest
         {
             this.Close();
         }
+
+        private void frmAddUser_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -52,6 +52,7 @@ namespace EBRMS.Priest
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.pbClose = new System.Windows.Forms.PictureBox();
             this.cmbRole = new Bunifu.UI.WinForms.BunifuDropdown();
             this.btnSave = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -60,7 +61,6 @@ namespace EBRMS.Priest
             this.txtConfirmPassword = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtUsername = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txtPassword = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -81,6 +81,17 @@ namespace EBRMS.Priest
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(867, 50);
             this.panel1.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(15, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(121, 25);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "ADD USER";
             // 
             // pbClose
             // 
@@ -607,17 +618,6 @@ namespace EBRMS.Priest
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.WordWrap = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(15, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(151, 31);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "ADD USER";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -654,7 +654,7 @@ namespace EBRMS.Priest
             this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(440, 180);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 25);
+            this.label5.Size = new System.Drawing.Size(70, 20);
             this.label5.TabIndex = 19;
             this.label5.Text = "Password";
             // 
@@ -664,7 +664,7 @@ namespace EBRMS.Priest
             this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(440, 272);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(159, 25);
+            this.label6.Size = new System.Drawing.Size(127, 20);
             this.label6.TabIndex = 20;
             this.label6.Text = "Confirm Password";
             // 
@@ -702,6 +702,7 @@ namespace EBRMS.Priest
             this.Name = "frmAddUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add User";
+            this.Load += new System.EventHandler(this.frmAddUser_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();

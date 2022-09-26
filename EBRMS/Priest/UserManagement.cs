@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace EBRMS.Priest
 {
@@ -28,6 +29,17 @@ namespace EBRMS.Priest
             btn.UseColumnTextForButtonValue = true;
 
             dgvUsers.Columns.Add(btn);
+        }
+
+        //clear controls
+        public void ClearControls()
+        {
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            txtUsername.Clear();
+            txtPassword.Clear();
+            txtConfirmPass.Clear();
+            cmbRole.SelectedIndex = 0;
         }
 
         void Form_Closed(object sender, FormClosedEventArgs e)
@@ -69,6 +81,8 @@ namespace EBRMS.Priest
         public static string QuerySelect;
         public static string QueryUpdate;
 
+
+        //DISPLAY USER DATA IN DATAGRID
         public void DisplayUser()
         {
             try
@@ -108,6 +122,126 @@ namespace EBRMS.Priest
             }
         }
 
+        //UpdateUser
+        public void UpdateUser()
+        {
+            con.Close();
+
+            if (String.IsNullOrEmpty(txtFirstName.Text))
+            {
+                MessageBox.Show("Enter First Name!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtFirstName.Focus();
+            }
+            else if (String.IsNullOrWhiteSpace(txtFirstName.Text))
+            {
+                MessageBox.Show("Whitespace is not allowed!");
+                txtFirstName.Clear();
+            }
+            else if (String.IsNullOrEmpty(txtLastName.Text))
+            {
+                MessageBox.Show("Enter Last Name!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtLastName.Focus();
+            }
+            else if (String.IsNullOrWhiteSpace(txtLastName.Text))
+            {
+                MessageBox.Show("Whitespace is not allowed!");
+                txtLastName.Clear();
+            }
+            else if (String.IsNullOrEmpty(txtUsername.Text))
+            {
+                MessageBox.Show("Enter Username!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtUsername.Focus();
+            }
+            else if (String.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+                MessageBox.Show("Whitespace is not allowed!");
+                txtUsername.Clear();
+            }
+            else if (String.IsNullOrEmpty(txtPassword.Text))
+            {
+                MessageBox.Show("Enter Password!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtPassword.Focus();
+            }
+            else if (String.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+                MessageBox.Show("Whitespace is not allowed!");
+                txtPassword.Clear();
+            }
+            else if (String.IsNullOrEmpty(txtConfirmPassword.Text))
+            {
+                MessageBox.Show("Enter Confirm Password!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtConfirmPassword.Focus();
+            }
+            else if (String.IsNullOrWhiteSpace(txtConfirmPassword.Text))
+            {
+                MessageBox.Show("Whitespace is not allowed!");
+                txtConfirmPassword.Clear();
+            }
+            else if (!Regex.IsMatch(txtPassword.Text, @"^(?=.*[a-z]).{8,15}$"))
+            {
+                MessageBox.Show("Password is minimum of 8 characters");
+                txtPassword.Clear();
+            }
+            else if (!Regex.IsMatch(txtPassword.Text, @"^(?=.*[A-Z])"))
+            {
+                MessageBox.Show("Password must have atleast 1 Uppercase letter");
+            }
+            else if (!Regex.IsMatch(txtPassword.Text, @"^(?=.*[@$!%*#?&_])"))
+            {
+                MessageBox.Show("Password must have atleast 1 special characters");
+            }
+            else if (!Regex.IsMatch(txtFirstName.Text, @"^([a-zA-Z-.]+?)([-\s'][a-zA-Z]+)*?$"))
+            {
+                MessageBox.Show("First Name must be in letters only");
+            }
+            else if (txtFirstName.Text != "" && txtLastName.Text != "" && txtContactNo.Text != "")
+            {
+                result = MessageBox.Show("Do you want to update this User?", "Update User", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        con.Close();
+                        con.Open();
+
+                        QueryUpdate = "UPDATE tblClient SET c_FN = @fName, c_MN = @mName, c_LN = @lName, c_ContactNo = @cNo, Province = @cProv, Municipality = @cMun, Barangay = @cBrgy WHERE clientID = (SELECT clientID FROM tblClient WHERE c_FN = @fName  AND c_MN = @mName AND c_LN = @lName)";
+
+                        cmd = new SqlCommand(QueryUpdate, con);
+
+                        cmd.Parameters.AddWithValue("@fName", txtFirstName.Text);
+                        cmd.Parameters.AddWithValue("@mName", txtMiddleName.Text);
+                        cmd.Parameters.AddWithValue("@lName", txtLastName.Text);
+                        cmd.Parameters.AddWithValue("@cNo", txtContactNo.Text);
+                        cmd.Parameters.AddWithValue("@cProv", cmbProvince.Text);
+                        cmd.Parameters.AddWithValue("@cMun", cmbMunicipality.Text);
+                        cmd.Parameters.AddWithValue("@cBrgy", cmbBarangay.Text);
+
+                        cmd.ExecuteNonQuery();
+
+                        MessageBox.Show("Client Updated Successfully!", "Update Client", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ClearControls();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                        con.Close();
+                    }
+                    finally
+                    {
+                        con.Close();
+                    }
+
+                    DisplayClients();
+                    ClearControls();
+                    pnlClientInfo.Visible = false;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please Provide Details!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
 
         private void txtViewUsers_TextChange(object sender, EventArgs e)
         {
@@ -142,14 +276,13 @@ namespace EBRMS.Priest
             DisplayUser();
         }
 
-        private void bunifuButton1_Click(object sender, EventArgs e)
+        private void btnUpdateUser_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void bunifuButton2_Click(object sender, EventArgs e)
-        {
-
+            ClearControls();
+            pnlUserInfo.Visible = true;
+            dgvUsers.Enabled = true;
+            btnSave.Visible = false;
+            btnUpdate.Visible = true;
         }
     }
 }

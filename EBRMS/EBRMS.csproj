@@ -246,6 +246,12 @@
     <Compile Include="Secretary\BookingManagement.Designer.cs">
       <DependentUpon>BookingManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Treasurer\Update Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Treasurer\Update Client.Designer.cs">
+      <DependentUpon>Update Client.cs</DependentUpon>
+    </Compile>
     <Compile Include="Treasurer\Payments.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -326,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Secretary\BookingManagement.resx">
       <DependentUpon>BookingManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Treasurer\Update Client.resx">
+      <DependentUpon>Update Client.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Treasurer\Payments.resx">
       <DependentUpon>Payments.cs</DependentUpon>
